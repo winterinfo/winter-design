@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="WINTER.DESIGN — портфолио Вячеслава Винтера, Web Designer | UI/UX Designer. Проектирую сайты, которые помогают бизнесу расти.">
+  <title>WINTER.DESIGN — Вячеслав Винтер, Web Designer | UI/UX Designer</title>
+  <link rel="canonical" href="/">
+  <meta property="og:title" content="WINTER.DESIGN — Вячеслав Винтер, Web Designer | UI/UX Designer">
+  <meta property="og:description" content="WINTER.DESIGN — портфолио Вячеслава Винтера, Web Designer | UI/UX Designer. Проектирую сайты, которые помогают бизнесу расти.">
+  <meta property="og:image" content="images/opengraph.png">
+  <meta property="og:url" content="index.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="WINTER.DESIGN">
+  <meta property="og:locale" content="ru_RU">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="WINTER.DESIGN — Вячеслав Винтер, Web Designer | UI/UX Designer">
+  <meta name="twitter:description" content="WINTER.DESIGN — портфолио Вячеслава Винтера, Web Designer | UI/UX Designer. Проектирую сайты, которые помогают бизнесу расти.">
+  <meta name="twitter:image" content="images/opengraph.png">
+  <link rel="icon" href="assets/favicon/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="assets/favicon/favicon-32x32.png" type="image/png" sizes="32x32">
+  <link rel="icon" href="assets/favicon/favicon-16x16.png" type="image/png" sizes="16x16">
+  <link rel="shortcut icon" href="assets/favicon/favicon.ico">
+  <link rel="apple-touch-icon" href="assets/favicon/apple-touch-icon.png" sizes="180x180">
+  <link rel="manifest" href="assets/favicon/site.webmanifest">
+  <meta name="theme-color" content="#0B1220">
+  <meta name="msapplication-TileColor" content="#0B1220">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a href="#hero" class="logo">
+        <span class="logo__mark">W</span>
+        <span class="logo__text">WINTER.DESIGN</span>
+      </a>
+
+      <nav class="nav" id="nav" aria-label="Основная навигация">
+        <ul class="nav__list">
+          <li><a href="#about" class="nav__link">Обо мне</a></li>
+          <li><a href="#services" class="nav__link">Услуги</a></li>
+          <li><a href="#portfolio" class="nav__link">Портфолио</a></li>
+          <li><a href="#process" class="nav__link">Процесс</a></li>
+          <li><a href="#contact" class="nav__link nav__link--cta">Связаться</a></li>
+        </ul>
+      </nav>
+
+      <button class="burger" id="burger" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="hero">
+      <div class="container hero__inner">
+        <div class="hero__layout">
+          <div class="hero__content reveal">
+            <p class="hero__label">Вячеслав Винтер · Web Designer | UI/UX Designer</p>
+            <h1 class="hero__title">
+              Создаю сайты, которые<br>
+              помогают бизнесу <em>расти</em>
+            </h1>
+            <p class="hero__desc">
+              Проектирую современные адаптивные сайты в Figma и Tilda, работаю
+              с визуальной концепцией, UX и подготовкой к публикации.
+            </p>
+            <div class="hero__actions">
+              <a href="#portfolio" class="btn btn--primary">Посмотреть проекты</a>
+              <a href="#contact" class="btn btn--ghost">Связаться со мной</a>
+            </div>
+            <div class="hero__stats">
+              <div class="stat">
+                <span class="stat__num" data-count="6">0</span>
+                <span class="stat__label">Кейсов</span>
+              </div>
+              <div class="stat">
+                <span class="stat__num stat__num--text">Figma · Tilda · Cursor AI</span>
+                <span class="stat__label">Инструменты</span>
+              </div>
+              <div class="stat">
+                <span class="stat__num stat__num--text">UI/UX · Адаптивный дизайн</span>
+                <span class="stat__label">Специализация</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero__visual reveal reveal--delay" aria-hidden="true">
+            <div class="hero__preview hero__preview--back">
+              <div class="hero__preview-bar"></div>
+              <div class="hero__preview-block hero__preview-block--wide"></div>
+              <div class="hero__preview-row">
+                <div class="hero__preview-block"></div>
+                <div class="hero__preview-block"></div>
+              </div>
+            </div>
+            <div class="hero__preview hero__preview--front">
+              <div class="hero__preview-tag">Топ-проект</div>
+              <div class="hero__preview-title">Русский Стандарт</div>
+              <img class="hero__preview-image" src="assets/images/projects/russian-standard.png" alt="">
+              <ul class="project-card__stack hero__preview-tags">
+                <li>Figma</li>
+                <li>Tilda</li>
+                <li>UI/UX</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section creation" aria-labelledby="creation-title">
+      <div class="container">
+        <div class="section__header reveal">
+          <h2 class="section__title" id="creation-title">Что я создаю</h2>
+          <p class="section__subtitle">Проектирую современные сайты и использую инструменты, которые помогают создавать удобные и качественные цифровые продукты.</p>
+        </div>
+        <div class="services__grid">
+          <article class="service-card reveal">
+            <h3 class="service-card__title">Что я создаю</h3>
+            <ul class="creation__list">
+              <li><span aria-hidden="true">✓</span>Лендинги</li>
+              <li><span aria-hidden="true">✓</span>Корпоративные сайты</li>
+              <li><span aria-hidden="true">✓</span>Интернет-магазины</li>
+            </ul>
+          </article>
+          <article class="service-card reveal reveal--delay">
+            <h3 class="service-card__title">С чем работаю</h3>
+            <ul class="creation__list">
+              <li><span aria-hidden="true">✓</span>Figma</li>
+              <li><span aria-hidden="true">✓</span>Tilda</li>
+              <li><span aria-hidden="true">✓</span>Cursor AI</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section about" id="about">
+      <div class="container">
+        <div class="section__header reveal">
+          <span class="section__tag">Обо мне</span>
+          <h2 class="section__title">Дизайн, который<br>решает задачи бизнеса</h2>
+        </div>
+        <div class="about__grid">
+          <div class="about__text reveal">
+            <p>
+              Меня зовут Вячеслав Винтер. Я веб-дизайнер, создающий современные
+              сайты в Figma и Tilda — от исследования и прототипирования до
+              публикации готового проекта.
+            </p>
+            <p>
+              Многолетний опыт работы преподавателем научил меня внимательно
+              слушать людей, анализировать задачи, структурировать информацию
+              и отвечать за конечный результат. Сегодня я объединяю дизайнерское
+              мышление, современные AI-инструменты и внимание к деталям, чтобы
+              создавать удобные, эстетичные и понятные интерфейсы.
+            </p>
+            <ul class="about__skills">
+              <li>Figma</li>
+              <li>Tilda</li>
+              <li>Cursor AI</li>
+              <li>UI/UX</li>
+              <li>Адаптивный дизайн</li>
+              <li>Adobe Creative Cloud</li>
+            </ul>
+          </div>
+          <div class="about__visual reveal reveal--delay">
+            <div class="about__card">
+              <span class="about__card-label">Опыт</span>
+              <h3>35 лет работы с людьми</h3>
+              <p>Многолетний педагогический опыт помог сформировать навыки анализа задач, коммуникации, системного мышления и ответственности за конечный результат.</p>
+            </div>
+            <div class="about__card about__card--accent">
+              <span class="about__card-label">Подход</span>
+              <h3>От идеи до публикации</h3>
+              <p>Исследование → Прототип → UI-дизайн → Адаптивная версия → Реализация на Tilda → Подготовка к публикации.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section services" id="services">
+      <div class="container">
+        <div class="section__header reveal">
+          <span class="section__tag">Услуги</span>
+          <h2 class="section__title">Что я делаю</h2>
+        </div>
+        <div class="services__grid">
+          <article class="service-card reveal">
+            <div class="service-card__num">01</div>
+            <h3 class="service-card__title">Веб-дизайн</h3>
+            <p class="service-card__desc">Создаю современные лендинги, корпоративные сайты и интернет-магазины с продуманной структурой, выразительным визуальным стилем и акцентом на удобство пользователя.</p>
+          </article>
+          <article class="service-card reveal reveal--delay">
+            <div class="service-card__num">02</div>
+            <h3 class="service-card__title">UI/UX-дизайн</h3>
+            <p class="service-card__desc">Проектирую пользовательские сценарии, создаю прототипы и интерфейсы, которые помогают посетителю быстро ориентироваться и выполнять целевые действия.</p>
+          </article>
+          <article class="service-card reveal reveal--delay-2">
+            <div class="service-card__num">03</div>
+            <h3 class="service-card__title">Разработка на Tilda</h3>
+            <p class="service-card__desc">Переношу дизайн в Tilda, создаю адаптивные страницы, настраиваю формы, Zero Block, базовое SEO и подготавливаю проекты к публикации.</p>
+          </article>
+          <article class="service-card reveal reveal--delay-3">
+            <div class="service-card__num">04</div>
+            <h3 class="service-card__title">AI в веб-дизайне</h3>
+            <p class="service-card__desc">Использую Cursor AI и современные инструменты искусственного интеллекта для ускорения разработки, поиска решений, подготовки контента и повышения качества проектов.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section portfolio" id="portfolio">
+      <div class="container">
+        <div class="section__header reveal">
+          <span class="section__tag">Портфолио</span>
+          <h2 class="section__title">Избранные проекты</h2>
+        </div>
+
+        <div class="portfolio__filters reveal" role="tablist" aria-label="Фильтр проектов">
+          <button class="filter-btn active" data-filter="all" role="tab" aria-selected="true">Все</button>
+          <button class="filter-btn" data-filter="corporate" role="tab" aria-selected="false">Корпоративные</button>
+          <button class="filter-btn" data-filter="shop" role="tab" aria-selected="false">Магазины</button>
+          <button class="filter-btn" data-filter="landing" role="tab" aria-selected="false">Лендинги</button>
+        </div>
+
+        <div class="portfolio__grid">
+          <article class="project-card reveal" data-category="corporate">
+            <div class="project-card__media">
+              <img src="assets/images/projects/russian-standard.png" alt="Русский Стандарт — превью корпоративного сайта" class="project-card__image" loading="lazy">
+            </div>
+            <div class="project-card__info">
+              <div class="project-card__meta">
+                <span class="project-card__tag">Корпоративный сайт</span>
+                <span class="project-card__year">2025</span>
+              </div>
+              <h3 class="project-card__title">Русский Стандарт</h3>
+              <p class="project-card__desc">Редизайн банковского сайта: Figma, Tilda, адаптивная вёрстка</p>
+              <ul class="project-card__stack">
+                <li>Figma</li>
+                <li>Tilda</li>
+                <li>Адаптивная вёрстка</li>
+              </ul>
+              <a href="projects/russian-standard.html" class="project-card__btn">Подробнее</a>
+            </div>
+          </article>
+          <article class="project-card reveal reveal--delay" data-category="shop">
+            <div class="project-card__media">
+              <img src="assets/images/projects/golden-cup.png" alt="Золотая Чаша — превью интернет-магазина" class="project-card__image" loading="lazy">
+            </div>
+            <div class="project-card__info">
+              <div class="project-card__meta">
+                <span class="project-card__tag">Интернет-магазин</span>
+                <span class="project-card__year">2025</span>
+              </div>
+              <h3 class="project-card__title">Золотая Чаша</h3>
+              <p class="project-card__desc">Интернет-магазин чая и кофе: Figma, Tilda, Zero Block</p>
+              <ul class="project-card__stack">
+                <li>Figma</li>
+                <li>Tilda</li>
+                <li>Zero Block</li>
+              </ul>
+              <a href="projects/golden-cup.html" class="project-card__btn">Подробнее</a>
+            </div>
+          </article>
+          <article class="project-card reveal reveal--delay-2" data-category="landing">
+            <div class="project-card__media">
+              <img src="assets/images/projects/kodak.png" alt="KODAK — превью лендинга фотостудии" class="project-card__image" loading="lazy">
+            </div>
+            <div class="project-card__info">
+              <div class="project-card__meta">
+                <span class="project-card__tag">Лендинг</span>
+                <span class="project-card__year">2024</span>
+              </div>
+              <h3 class="project-card__title">KODAK</h3>
+              <p class="project-card__desc">Лендинг фотостудии в стиле современного минимализма</p>
+              <ul class="project-card__stack">
+                <li>Figma</li>
+                <li>Tilda</li>
+                <li>UI/UX</li>
+              </ul>
+              <a href="projects/kodak.html" class="project-card__btn">Подробнее</a>
+            </div>
+          </article>
+          <article class="project-card reveal" data-category="landing">
+            <div class="project-card__media">
+              <img src="assets/images/projects/sweetbakery.png" alt="SweetBakery — превью лендинга кондитерской" class="project-card__image" loading="lazy">
+            </div>
+            <div class="project-card__info">
+              <div class="project-card__meta">
+                <span class="project-card__tag">Лендинг</span>
+                <span class="project-card__year">2024</span>
+              </div>
+              <h3 class="project-card__title">SweetBakery</h3>
+              <p class="project-card__desc">Лендинг кондитерской в пастельной цветовой палитре</p>
+              <ul class="project-card__stack">
+                <li>Figma</li>
+                <li>Tilda</li>
+                <li>UI/UX</li>
+              </ul>
+              <a href="projects/sweetbakery.html" class="project-card__btn">Подробнее</a>
+            </div>
+          </article>
+          <article class="project-card reveal reveal--delay" data-category="landing">
+            <div class="project-card__media">
+              <img src="assets/images/projects/interstellar.png" alt="Interstellar — превью промо-сайта" class="project-card__image" loading="lazy">
+            </div>
+            <div class="project-card__info">
+              <div class="project-card__meta">
+                <span class="project-card__tag">Промо-сайт</span>
+                <span class="project-card__year">2023</span>
+              </div>
+              <h3 class="project-card__title">Interstellar</h3>
+              <p class="project-card__desc">Промо-сайт с космической стилистикой</p>
+              <ul class="project-card__stack">
+                <li>Figma</li>
+                <li>Tilda</li>
+                <li>Моушн-дизайн</li>
+              </ul>
+              <a href="projects/interstellar.html" class="project-card__btn">Подробнее</a>
+            </div>
+          </article>
+          <article class="project-card reveal reveal--delay-2" data-category="landing">
+            <div class="project-card__media">
+              <img src="assets/images/projects/bombbit.png" alt="BombBit — превью лендинга музыкального фестиваля" class="project-card__image" loading="lazy">
+            </div>
+            <div class="project-card__info">
+              <div class="project-card__meta">
+                <span class="project-card__tag">Лендинг</span>
+                <span class="project-card__year">2026</span>
+              </div>
+              <h3 class="project-card__title">BombBit</h3>
+              <p class="project-card__desc">Концепция лендинга музыкального фестиваля для молодой аудитории.</p>
+              <ul class="project-card__stack">
+                <li>Figma</li>
+                <li>UI/UX</li>
+                <li>Адаптивный дизайн</li>
+              </ul>
+              <a href="projects/bombbit.html" class="project-card__btn">Подробнее</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section process" id="process">
+      <div class="container">
+        <div class="section__header reveal">
+          <span class="section__tag">Процесс</span>
+          <h2 class="section__title">Как я работаю</h2>
+        </div>
+        <div class="process__timeline">
+          <div class="process__step reveal">
+            <div class="process__step-num">01</div>
+            <h3>Исследование</h3>
+            <p>Анализирую аудиторию, конкурентов и бизнес-цели. Формирую стратегию.</p>
+          </div>
+          <div class="process__step reveal reveal--delay">
+            <div class="process__step-num">02</div>
+            <h3>Концепция</h3>
+            <p>Создаю moodboard, wireframes и определяю визуальное направление.</p>
+          </div>
+          <div class="process__step reveal reveal--delay-2">
+            <div class="process__step-num">03</div>
+            <h3>Дизайн</h3>
+            <p>Разрабатываю UI в Figma, прорабатываю все состояния и адаптив.</p>
+          </div>
+          <div class="process__step reveal reveal--delay-3">
+            <div class="process__step-num">04</div>
+            <h3>Запуск</h3>
+            <p>Передаю макеты, поддерживаю вёрстку и помогаю с релизом.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section approach" id="approach">
+      <div class="container">
+        <div class="section__header reveal">
+          <h2 class="section__title">Мой подход к работе</h2>
+          <p class="section__subtitle">Принципы, которых я придерживаюсь при создании каждого проекта.</p>
+        </div>
+        <div class="approach__grid">
+          <article class="service-card reveal">
+            <h3 class="service-card__title">Понимание задачи</h3>
+            <p class="service-card__desc">Каждый проект начинается с изучения целей, аудитории и содержания. Это помогает принимать осознанные дизайнерские решения, а не опираться только на визуальные приёмы.</p>
+          </article>
+          <article class="service-card reveal reveal--delay">
+            <h3 class="service-card__title">Системный процесс</h3>
+            <p class="service-card__desc">Работа строится по понятному этапному сценарию: исследование, структура, прототипирование, UI-дизайн, адаптивные версии и подготовка проекта к публикации.</p>
+          </article>
+          <article class="service-card reveal reveal--delay-2">
+            <h3 class="service-card__title">Внимание к деталям</h3>
+            <p class="service-card__desc">Аккуратная типографика, единая дизайн-система, адаптивность и последовательность помогают создавать современные интерфейсы, которыми удобно пользоваться.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section contact" id="contact">
+      <div class="container">
+        <div class="contact__grid">
+          <div class="contact__info reveal">
+            <span class="section__tag">Контакты</span>
+            <h2 class="section__title">Давайте создадим<br>ваш следующий <em>проект</em></h2>
+            <p>Расскажите о задаче — я отвечу в течение 24 часов и предложу план работы.</p>
+            <ul class="contact__details">
+              <li>
+                <span class="contact__label">Email</span>
+                <a href="mailto:winterinfo@yandex.ru">winterinfo@yandex.ru</a>
+              </li>
+              <li>
+                <span class="contact__label">Telegram</span>
+                <a href="https://t.me/WinterSlava" target="_blank" rel="noopener noreferrer">@WinterSlava</a>
+              </li>
+              <li>
+                <span class="contact__label">Локация</span>
+                <span>Россия</span>
+              </li>
+            </ul>
+          </div>
+          <form class="contact__form reveal reveal--delay" id="contactForm" novalidate>
+            <div class="form-group">
+              <label for="name">Имя</label>
+              <input type="text" id="name" name="name" placeholder="Ваше имя" required autocomplete="name">
+              <span class="form-error" id="nameError" role="alert"></span>
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="you@email.com" required autocomplete="email">
+              <span class="form-error" id="emailError" role="alert"></span>
+            </div>
+            <div class="form-group">
+              <label for="message">Сообщение</label>
+              <textarea id="message" name="message" rows="5" placeholder="Расскажите о проекте..." required></textarea>
+              <span class="form-error" id="messageError" role="alert"></span>
+            </div>
+            <button type="submit" class="btn btn--primary btn--full">Отправить</button>
+            <p class="form-success" id="formSuccess" hidden role="status">Спасибо! Я свяжусь с вами в ближайшее время.</p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <a href="#hero" class="logo logo--footer">
+        <span class="logo__mark">W</span>
+        <span class="logo__text">WINTER.DESIGN</span>
+      </a>
+      <p class="footer__copy">&copy; 2026 Вячеслав Винтер · WINTER.DESIGN. Все права защищены.</p>
+      <div class="footer__socials">
+        <span aria-label="Behance">Be</span>
+        <span aria-label="Dribbble">Dr</span>
+        <span aria-label="Instagram">Ig</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/script.js"></script>
+</body>
+</html>

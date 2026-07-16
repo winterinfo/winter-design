@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+
+Disallow: /projects/_case-template.html
+
+Sitemap: /sitemap.xml
