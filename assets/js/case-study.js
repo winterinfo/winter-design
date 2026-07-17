@@ -84,7 +84,11 @@
         return;
       }
 
-      if (href === '#portfolio' || /#portfolio(?:$|[?#])/.test(href)) {
+      if (
+        href === '#portfolio' ||
+        href.indexOf('index.html#portfolio') !== -1 ||
+        /#portfolio(?:$|[?#])/.test(href)
+      ) {
         reachGoal('portfolio_open');
         return;
       }

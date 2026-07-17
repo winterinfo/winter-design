@@ -3,4 +3,4 @@ Allow: /
 
 Disallow: /projects/_case-template.html
 
-Sitemap: /sitemap.xml
+Sitemap: https://winterinfo.github.io/winter-design/sitemap.xml
