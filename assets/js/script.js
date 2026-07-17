@@ -240,6 +240,7 @@
   function showError(id, message) {
     const input = document.getElementById(id);
     const error = document.getElementById(id + 'Error');
+    if (!input || !error) return;
     input.classList.add('error');
     error.textContent = message;
   }
@@ -273,7 +274,7 @@
       var formError = document.getElementById('formError');
       var formSuccess = document.getElementById('formSuccess');
       var submitBtn = document.getElementById('formSubmitBtn');
-      var submitErrorText = 'Не удалось отправить заявку. Попробуйте ещё раз или напишите мне напрямую.';
+      var submitErrorText = 'Не удалось отправить заявку. Напишите мне по почте или в Telegram.';
 
       if (formError) {
         formError.hidden = true;
@@ -316,17 +317,17 @@
         submitBtn.textContent = 'Отправляем…';
       }
 
+      var payload = new FormData();
+      payload.append('name', name);
+      payload.append('email', email);
+      payload.append('message', message);
+
       fetch('https://formspree.io/f/mbdngydp', {
         method: 'POST',
         headers: {
-          'Accept': 'application/json',
-          'Content-Type': 'application/json'
+          'Accept': 'application/json'
         },
-        body: JSON.stringify({
-          name: name,
-          email: email,
-          message: message
-        })
+        body: payload
       })
         .then(function (response) {
           return response.json()
@@ -334,12 +335,16 @@
               return { response: response, data: data };
             })
             .catch(function (parseError) {
-              console.error('Formspree response parse error:', parseError);
+              console.error('Formspree response parse error:', {
+                status: response.status,
+                statusText: response.statusText,
+                error: parseError
+              });
               return { response: response, data: null };
             });
         })
         .then(function (result) {
-          if (result.response.ok === true) {
+          if (result.response.ok === true && result.data && result.data.ok === true) {
             if (formSuccess) {
               formSuccess.hidden = false;
             }
@@ -353,7 +358,11 @@
             return;
           }
 
-          console.error('Formspree error response:', result.data || result.response.status);
+          console.error('Formspree submission failed:', {
+            status: result.response.status,
+            statusText: result.response.statusText,
+            data: result.data
+          });
           showSubmitError(formError, submitErrorText);
         })
         .catch(function (error) {
