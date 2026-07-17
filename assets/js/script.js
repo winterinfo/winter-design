@@ -257,10 +257,17 @@
     e.preventDefault();
     clearErrors();
 
-    const name = document.getElementById('name').value.trim();
-    const email = document.getElementById('email').value.trim();
-    const message = document.getElementById('message').value.trim();
-    let valid = true;
+    var formError = document.getElementById('formError');
+    var formSuccess = document.getElementById('formSuccess');
+    var submitBtn = document.getElementById('formSubmitBtn');
+
+    if (formError) { formError.hidden = true; formError.textContent = ''; }
+    if (formSuccess) { formSuccess.hidden = true; }
+
+    var name = document.getElementById('name').value.trim();
+    var email = document.getElementById('email').value.trim();
+    var message = document.getElementById('message').value.trim();
+    var valid = true;
 
     if (!name) {
       showError('name', 'Введите имя');
@@ -283,20 +290,96 @@
       valid = false;
     }
 
-    if (valid) {
-      const success = document.getElementById('formSuccess');
-      success.hidden = false;
-      contactForm.reset();
+    if (!valid) return;
 
-      setTimeout(function () {
-        success.hidden = true;
-      }, 5000);
+    var submitErrorText = 'Не удалось отправить заявку. Попробуйте ещё раз или напишите мне напрямую.';
+
+    if (submitBtn) {
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Отправляем…';
     }
+
+    fetch('https://formspree.io/f/mbdngydp', {
+      method: 'POST',
+      headers: { 'Accept': 'application/json' },
+      body: new FormData(contactForm)
+    })
+      .then(function (response) {
+        if (response.ok) {
+          if (formSuccess) { formSuccess.hidden = false; }
+          contactForm.reset();
+          reachGoal('project_request');
+          setTimeout(function () {
+            if (formSuccess) { formSuccess.hidden = true; }
+          }, 6000);
+        } else {
+          if (formError) {
+            formError.textContent = submitErrorText;
+            formError.hidden = false;
+          }
+        }
+      })
+      .catch(function () {
+        if (formError) {
+          formError.textContent = submitErrorText;
+          formError.hidden = false;
+        }
+      })
+      .finally(function () {
+        if (submitBtn) {
+          submitBtn.disabled = false;
+          submitBtn.textContent = 'Отправить';
+        }
+      });
   });
+
+  function reachGoal(name) {
+    if (typeof ym === 'function') {
+      ym(110789592, 'reachGoal', name);
+    }
+  }
+
+  function initMetrikaGoals() {
+    document.addEventListener('click', function (e) {
+      var link = e.target.closest('a');
+      if (!link) return;
+
+      var href = link.getAttribute('href') || '';
+
+      if (/^mailto:/i.test(href)) {
+        reachGoal('email_click');
+        return;
+      }
+
+      if (/t\.me\//i.test(href) || /telegram\.me\//i.test(href)) {
+        reachGoal('telegram_click');
+        return;
+      }
+
+      if (/projects\/[^?#]+\.html/i.test(href) || link.classList.contains('project-card__btn')) {
+        reachGoal('case_open');
+        return;
+      }
+
+      if (href === '#portfolio' || /#portfolio(?:$|[?#])/.test(href)) {
+        reachGoal('portfolio_open');
+        return;
+      }
+
+      if (
+        href === '#contact' ||
+        /#contact(?:$|[?#])/.test(href) ||
+        link.classList.contains('nav__link--cta')
+      ) {
+        reachGoal('contact_click');
+      }
+    });
+  }
 
   window.addEventListener('scroll', handleScroll, { passive: true });
   handleScroll();
   initReveal();
   initCounters();
   initPointerDepth();
+  initMetrikaGoals();
 })();

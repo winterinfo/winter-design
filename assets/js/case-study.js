@@ -61,7 +61,46 @@
     reveals.forEach(function (el) { observer.observe(el); });
   }
 
+  function reachGoal(name) {
+    if (typeof ym === 'function') {
+      ym(110789592, 'reachGoal', name);
+    }
+  }
+
+  function initMetrikaGoals() {
+    document.addEventListener('click', function (e) {
+      var link = e.target.closest('a');
+      if (!link) return;
+
+      var href = link.getAttribute('href') || '';
+
+      if (/^mailto:/i.test(href)) {
+        reachGoal('email_click');
+        return;
+      }
+
+      if (/t\.me\//i.test(href) || /telegram\.me\//i.test(href)) {
+        reachGoal('telegram_click');
+        return;
+      }
+
+      if (href === '#portfolio' || /#portfolio(?:$|[?#])/.test(href)) {
+        reachGoal('portfolio_open');
+        return;
+      }
+
+      if (
+        href === '#contact' ||
+        /#contact(?:$|[?#])/.test(href) ||
+        link.classList.contains('nav__link--cta')
+      ) {
+        reachGoal('contact_click');
+      }
+    });
+  }
+
   window.addEventListener('scroll', handleScroll, { passive: true });
   handleScroll();
   initReveal();
+  initMetrikaGoals();
 })();

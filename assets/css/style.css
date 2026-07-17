@@ -1051,6 +1051,12 @@ em {
   border-radius: var(--radius-sm);
 }
 
+#formError {
+  margin-top: 16px;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
 /* Footer */
 .footer {
   padding: 48px 0;
