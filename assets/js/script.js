@@ -245,93 +245,129 @@
   }
 
   function clearErrors() {
+    if (!contactForm) return;
+
     contactForm.querySelectorAll('input, textarea').forEach(function (el) {
       el.classList.remove('error');
     });
-    contactForm.querySelectorAll('.form-error').forEach(function (el) {
+    contactForm.querySelectorAll('.form-error:not(#formError)').forEach(function (el) {
       el.textContent = '';
     });
   }
 
-  contactForm.addEventListener('submit', function (e) {
-    e.preventDefault();
-    clearErrors();
+  function showSubmitError(formError, message) {
+    if (!formError) return;
+    formError.textContent = message;
+    formError.hidden = false;
+  }
 
-    var formError = document.getElementById('formError');
-    var formSuccess = document.getElementById('formSuccess');
-    var submitBtn = document.getElementById('formSubmitBtn');
+  function initContactForm() {
+    if (!contactForm || contactForm.dataset.submitBound === 'true') return;
 
-    if (formError) { formError.hidden = true; formError.textContent = ''; }
-    if (formSuccess) { formSuccess.hidden = true; }
+    contactForm.dataset.submitBound = 'true';
 
-    var name = document.getElementById('name').value.trim();
-    var email = document.getElementById('email').value.trim();
-    var message = document.getElementById('message').value.trim();
-    var valid = true;
+    contactForm.addEventListener('submit', function (e) {
+      e.preventDefault();
+      clearErrors();
 
-    if (!name) {
-      showError('name', 'Введите имя');
-      valid = false;
-    }
+      var formError = document.getElementById('formError');
+      var formSuccess = document.getElementById('formSuccess');
+      var submitBtn = document.getElementById('formSubmitBtn');
+      var submitErrorText = 'Не удалось отправить заявку. Попробуйте ещё раз или напишите мне напрямую.';
 
-    if (!email) {
-      showError('email', 'Введите email');
-      valid = false;
-    } else if (!validateEmail(email)) {
-      showError('email', 'Некорректный email');
-      valid = false;
-    }
+      if (formError) {
+        formError.hidden = true;
+        formError.textContent = '';
+      }
+      if (formSuccess) {
+        formSuccess.hidden = true;
+      }
 
-    if (!message) {
-      showError('message', 'Введите сообщение');
-      valid = false;
-    } else if (message.length < 10) {
-      showError('message', 'Минимум 10 символов');
-      valid = false;
-    }
+      var name = document.getElementById('name').value.trim();
+      var email = document.getElementById('email').value.trim();
+      var message = document.getElementById('message').value.trim();
+      var valid = true;
 
-    if (!valid) return;
+      if (!name) {
+        showError('name', 'Введите имя');
+        valid = false;
+      }
 
-    var submitErrorText = 'Не удалось отправить заявку. Попробуйте ещё раз или напишите мне напрямую.';
+      if (!email) {
+        showError('email', 'Введите email');
+        valid = false;
+      } else if (!validateEmail(email)) {
+        showError('email', 'Некорректный email');
+        valid = false;
+      }
 
-    if (submitBtn) {
-      submitBtn.disabled = true;
-      submitBtn.textContent = 'Отправляем…';
-    }
+      if (!message) {
+        showError('message', 'Введите сообщение');
+        valid = false;
+      } else if (message.length < 10) {
+        showError('message', 'Минимум 10 символов');
+        valid = false;
+      }
 
-    fetch('https://formspree.io/f/mbdngydp', {
-      method: 'POST',
-      headers: { 'Accept': 'application/json' },
-      body: new FormData(contactForm)
-    })
-      .then(function (response) {
-        if (response.ok) {
-          if (formSuccess) { formSuccess.hidden = false; }
-          contactForm.reset();
-          reachGoal('project_request');
-          setTimeout(function () {
-            if (formSuccess) { formSuccess.hidden = true; }
-          }, 6000);
-        } else {
-          if (formError) {
-            formError.textContent = submitErrorText;
-            formError.hidden = false;
+      if (!valid) return;
+
+      if (submitBtn) {
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'Отправляем…';
+      }
+
+      fetch('https://formspree.io/f/mbdngydp', {
+        method: 'POST',
+        headers: {
+          'Accept': 'application/json',
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          name: name,
+          email: email,
+          message: message
+        })
+      })
+        .then(function (response) {
+          return response.json()
+            .then(function (data) {
+              return { response: response, data: data };
+            })
+            .catch(function (parseError) {
+              console.error('Formspree response parse error:', parseError);
+              return { response: response, data: null };
+            });
+        })
+        .then(function (result) {
+          if (result.response.ok === true) {
+            if (formSuccess) {
+              formSuccess.hidden = false;
+            }
+            contactForm.reset();
+            reachGoal('project_request');
+            setTimeout(function () {
+              if (formSuccess) {
+                formSuccess.hidden = true;
+              }
+            }, 6000);
+            return;
           }
-        }
-      })
-      .catch(function () {
-        if (formError) {
-          formError.textContent = submitErrorText;
-          formError.hidden = false;
-        }
-      })
-      .finally(function () {
-        if (submitBtn) {
-          submitBtn.disabled = false;
-          submitBtn.textContent = 'Отправить';
-        }
-      });
-  });
+
+          console.error('Formspree error response:', result.data || result.response.status);
+          showSubmitError(formError, submitErrorText);
+        })
+        .catch(function (error) {
+          console.error('Formspree request failed:', error);
+          showSubmitError(formError, submitErrorText);
+        })
+        .finally(function () {
+          if (submitBtn) {
+            submitBtn.disabled = false;
+            submitBtn.textContent = 'Отправить';
+          }
+        });
+    });
+  }
 
   function reachGoal(name) {
     if (typeof ym === 'function') {
@@ -381,5 +417,6 @@
   initReveal();
   initCounters();
   initPointerDepth();
+  initContactForm();
   initMetrikaGoals();
 })();
