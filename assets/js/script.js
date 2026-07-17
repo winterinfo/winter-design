@@ -1,6 +1,8 @@
 (function () {
   'use strict';
 
+  var API_URL = 'https://winter-design-worker.<ACCOUNT>.workers.dev/contact';
+
   const header = document.getElementById('header');
   const burger = document.getElementById('burger');
   const nav = document.getElementById('nav');
@@ -262,6 +264,40 @@
     formError.hidden = false;
   }
 
+  function submitFormRequest(url, payload) {
+    return fetch(url, {
+      method: 'POST',
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(payload)
+    }).then(function (response) {
+      return response.json()
+        .then(function (data) {
+          return { response: response, data: data };
+        })
+        .catch(function (parseError) {
+          console.error('Contact form response parse error:', {
+            status: response.status,
+            statusText: response.statusText,
+            error: parseError
+          });
+          return { response: response, data: null };
+        });
+    });
+  }
+
+  function getSubmitErrorMessage(data, fallback) {
+    if (data && typeof data.error === 'string' && data.error) {
+      return data.error;
+    }
+    if (data && typeof data.message === 'string' && data.message) {
+      return data.message;
+    }
+    return fallback;
+  }
+
   function initContactForm() {
     if (!contactForm || contactForm.dataset.submitBound === 'true') return;
 
@@ -317,34 +353,13 @@
         submitBtn.textContent = 'Отправляем…';
       }
 
-      var payload = new FormData();
-      payload.append('name', name);
-      payload.append('email', email);
-      payload.append('message', message);
-
-      fetch('https://formspree.io/f/mbdngydp', {
-        method: 'POST',
-        headers: {
-          'Accept': 'application/json'
-        },
-        body: payload
+      submitFormRequest(API_URL, {
+        name: name,
+        email: email,
+        message: message
       })
-        .then(function (response) {
-          return response.json()
-            .then(function (data) {
-              return { response: response, data: data };
-            })
-            .catch(function (parseError) {
-              console.error('Formspree response parse error:', {
-                status: response.status,
-                statusText: response.statusText,
-                error: parseError
-              });
-              return { response: response, data: null };
-            });
-        })
         .then(function (result) {
-          if (result.response.ok === true && result.data && result.data.ok === true) {
+          if (result.response.ok === true) {
             if (formSuccess) {
               formSuccess.hidden = false;
             }
@@ -358,15 +373,18 @@
             return;
           }
 
-          console.error('Formspree submission failed:', {
+          console.error('Contact form submission failed:', {
             status: result.response.status,
             statusText: result.response.statusText,
             data: result.data
           });
-          showSubmitError(formError, submitErrorText);
+          showSubmitError(
+            formError,
+            getSubmitErrorMessage(result.data, submitErrorText)
+          );
         })
         .catch(function (error) {
-          console.error('Formspree request failed:', error);
+          console.error('Contact form request failed:', error);
           showSubmitError(formError, submitErrorText);
         })
         .finally(function () {
