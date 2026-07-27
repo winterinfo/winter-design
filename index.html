@@ -54,11 +54,11 @@
 
       <nav class="nav" id="nav" aria-label="Основная навигация">
         <ul class="nav__list">
-          <li><a href="#about" class="nav__link">Обо мне</a></li>
-          <li><a href="#services" class="nav__link">Услуги</a></li>
+          <li><a href="#hero" class="nav__link">Главная</a></li>
           <li><a href="#portfolio" class="nav__link">Портфолио</a></li>
-          <li><a href="#process" class="nav__link">Процесс</a></li>
-          <li><a href="#contact" class="nav__link nav__link--cta">Связаться</a></li>
+          <li><a href="services.html" class="nav__link">Услуги</a></li>
+          <li><a href="#about" class="nav__link">Обо мне</a></li>
+          <li><a href="#contact" class="nav__link nav__link--cta">Контакты</a></li>
         </ul>
       </nav>
 
@@ -227,6 +227,9 @@
             <h3 class="service-card__title">AI в веб-дизайне</h3>
             <p class="service-card__desc">Использую Cursor AI и современные инструменты искусственного интеллекта для ускорения разработки, поиска решений, подготовки контента и повышения качества проектов.</p>
           </article>
+        </div>
+        <div class="hero__actions reveal">
+          <a href="services.html" class="btn btn--ghost">Подробнее об услугах</a>
         </div>
       </div>
     </section>
@@ -424,7 +427,7 @@
           <div class="contact__info reveal">
             <span class="section__tag">Контакты</span>
             <h2 class="section__title">Давайте создадим<br>ваш следующий <em>проект</em></h2>
-            <p>Расскажите о задаче — я отвечу в течение 24 часов и предложу план работы.</p>
+            <p>Расскажите о вашем проекте. Оставьте телефон или e-mail — я свяжусь с вами в ближайшее время, чтобы обсудить задачу и предложить оптимальное решение.</p>
             <ul class="contact__details">
               <li>
                 <span class="contact__label">Email</span>
@@ -447,8 +450,13 @@
               <span class="form-error" id="nameError" role="alert"></span>
             </div>
             <div class="form-group">
-              <label for="email">Email</label>
-              <input type="email" id="email" name="email" placeholder="you@email.com" required autocomplete="email">
+              <label for="phone">Телефон</label>
+              <input type="tel" id="phone" name="phone" placeholder="+7 (999) 123-45-67" required autocomplete="tel" inputmode="tel">
+              <span class="form-error" id="phoneError" role="alert"></span>
+            </div>
+            <div class="form-group">
+              <label for="email">Email <span aria-hidden="true">(необязательно)</span></label>
+              <input type="email" id="email" name="email" placeholder="you@email.com" autocomplete="email">
               <span class="form-error" id="emailError" role="alert"></span>
             </div>
             <div class="form-group">
@@ -456,7 +464,7 @@
               <textarea id="message" name="message" rows="5" placeholder="Расскажите о проекте..." required></textarea>
               <span class="form-error" id="messageError" role="alert"></span>
             </div>
-            <button type="submit" class="btn btn--primary btn--full" id="formSubmitBtn">Отправить</button>
+            <button type="submit" class="btn btn--primary btn--full" id="formSubmitBtn">Обсудить проект</button>
             <p class="form-success" id="formSuccess" hidden role="status">Спасибо! Я свяжусь с вами в ближайшее время.</p>
             <p class="form-error" id="formError" hidden role="alert"></p>
           </form>

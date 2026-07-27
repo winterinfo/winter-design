@@ -53,10 +53,13 @@
         <span class="logo__text">WINTER.DESIGN</span>
       </a>
 
-      <nav class="nav case-nav" id="nav" aria-label="Навигация кейса">
+      <nav class="nav" id="nav" aria-label="Основная навигация">
         <ul class="nav__list">
-          <li><a href="../index.html#portfolio" class="nav__link nav__link--back">Портфолио</a></li>
-          <li><a href="../index.html#contact" class="nav__link nav__link--cta">Связаться</a></li>
+          <li><a href="../index.html#hero" class="nav__link">Главная</a></li>
+          <li><a href="../index.html#portfolio" class="nav__link">Портфолио</a></li>
+          <li><a href="../services.html" class="nav__link">Услуги</a></li>
+          <li><a href="../index.html#about" class="nav__link">Обо мне</a></li>
+          <li><a href="../index.html#contact" class="nav__link nav__link--cta">Контакты</a></li>
         </ul>
       </nav>
 
@@ -121,7 +124,7 @@
         </div>
 
         <figure class="case-hero__visual reveal reveal--delay">
-          <img src="../assets/images/projects/kodak.png" alt="Главный экран лендинга фотосалона KODAK" width="1920" height="1080" loading="eager">
+          <img src="../assets/images/projects/HERO.png" alt="Главный экран лендинга фотосалона KODAK" width="681" height="306" loading="eager">
         </figure>
       </div>
     </section>
@@ -307,9 +310,44 @@
           </p>
         </div>
         <figure class="case-screen reveal reveal--delay">
-          <img src="../assets/images/projects/kodak.png" alt="Главный экран лендинга фотосалона KODAK" width="1920" height="1080" loading="lazy">
+          <img src="../assets/images/projects/kodak-desktop.png" alt="Главный экран лендинга фотосалона KODAK" width="564" height="2048" loading="lazy">
           <figcaption>Desktop — главный экран с позиционированием фотосалона, изображением и призывом к действию</figcaption>
         </figure>
+      </div>
+    </section>
+
+    <section class="case-section case-section--flow" id="adaptive">
+      <div class="container">
+        <div class="section__header reveal">
+          <span class="section__tag">Адаптивный дизайн</span>
+          <h2 class="case-section__title">Адаптивный дизайн</h2>
+          <p class="case-section__text">
+            Интерфейс адаптирован для Desktop, Tablet в горизонтальной и вертикальной ориентации, а также для Mobile. Для каждого разрешения переработаны композиция, навигация и размеры элементов управления, чтобы сохранить удобство использования и читаемость контента на любом устройстве.
+          </p>
+        </div>
+        <div class="case-adaptive case-adaptive--kodak">
+          <article class="case-adaptive__card reveal">
+            <div class="case-adaptive__media">
+              <img src="../assets/images/projects/kodak-mobile.png" alt="KODAK — мобильная версия интерфейса" width="505" height="2048" loading="lazy">
+            </div>
+            <h3 class="case-adaptive__title">Mobile</h3>
+            <p class="case-adaptive__meta">390 px</p>
+          </article>
+          <article class="case-adaptive__card reveal reveal--delay">
+            <div class="case-adaptive__media">
+              <img src="../assets/images/projects/kodak-tablet-vertical.png" alt="KODAK — вертикальная планшетная версия интерфейса" width="328" height="2048" loading="lazy">
+            </div>
+            <h3 class="case-adaptive__title">Tablet Vertical</h3>
+            <p class="case-adaptive__meta">768 px</p>
+          </article>
+          <article class="case-adaptive__card reveal reveal--delay-2">
+            <div class="case-adaptive__media">
+              <img src="../assets/images/projects/kodak-tablet-horizontal.png" alt="KODAK — горизонтальная планшетная версия интерфейса" width="867" height="2047" loading="lazy">
+            </div>
+            <h3 class="case-adaptive__title">Tablet Horizontal</h3>
+            <p class="case-adaptive__meta">1024 px</p>
+          </article>
+        </div>
       </div>
     </section>
 
@@ -420,9 +458,27 @@
       </div>
     </section>
 
+    <section class="case-section case-section--alt" id="live">
+      <div class="container">
+        <div class="case-live reveal">
+          <h2 class="case-section__title">Посмотреть проект в работе</h2>
+          <p class="case-section__text">
+            Лучший способ оценить дизайн — увидеть его в действии.
+          </p>
+          <p class="case-section__text">
+            Откройте опубликованную версию проекта и познакомьтесь с интерфейсом, навигацией, адаптивностью и взаимодействием элементов так, как это увидит реальный пользователь.
+          </p>
+          <a href="https://www.figma.com/proto/nNY8371Irr5E2kzbk38niz/Design-System-of-KODAK-SUPER?page-id=71%3A2735&node-id=71-2985&t=0yKB19PQoiKXgUNs-0&scaling=min-zoom&content-scaling=fixed" class="btn btn--primary" target="_blank" rel="noopener noreferrer">Открыть интерактивный макет</a>
+        </div>
+      </div>
+    </section>
+
     <section class="case-cta">
       <div class="container reveal">
-        <a href="../index.html#portfolio" class="btn btn--primary">Вернуться к портфолио</a>
+        <div class="hero__actions">
+          <a href="../index.html#portfolio" class="btn btn--primary">Вернуться к портфолио</a>
+          <a href="../services.html" class="btn btn--ghost">Услуги</a>
+        </div>
       </div>
     </section>
   </main>
