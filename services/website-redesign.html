@@ -39,6 +39,11 @@
       grid-template-columns: repeat(3, minmax(0, 1fr));
     }
 
+    #cases .services__grid {
+      grid-template-columns: minmax(0, calc((100% - 28px) / 2));
+      justify-content: start;
+    }
+
     @media (max-width: 1024px) {
       #service-includes .services__grid,
       #faq .services__grid,
@@ -50,7 +55,8 @@
     @media (max-width: 768px) {
       #service-includes .services__grid,
       #faq .services__grid,
-      #process .process__timeline {
+      #process .process__timeline,
+      #cases .services__grid {
         grid-template-columns: 1fr;
       }
     }
@@ -260,21 +266,6 @@
             <h3 class="service-card__title">Русский Стандарт</h3>
             <p class="service-card__desc">Концепт редизайна банковского сайта с акцентом на UX, визуальную ясность и современную структуру.</p>
             <a href="../projects/russian-standard.html" class="project-card__btn">Открыть кейс</a>
-          </article>
-          <article class="service-card reveal reveal--delay">
-            <h3 class="service-card__title">KODAK</h3>
-            <p class="service-card__desc">Обновление лендинга фотосалона с сильной визуальной подачей, современной структурой и адаптивными экранами.</p>
-            <a href="../projects/kodak.html" class="project-card__btn">Открыть кейс</a>
-          </article>
-          <article class="service-card reveal reveal--delay-2">
-            <h3 class="service-card__title">SweetBakery</h3>
-            <p class="service-card__desc">Обновление лендинга кондитерской с выверенной структурой, мягкой визуальной подачей и адаптивными экранами.</p>
-            <a href="../projects/sweetbakery.html" class="project-card__btn">Открыть кейс</a>
-          </article>
-          <article class="service-card reveal reveal--delay-3">
-            <h3 class="service-card__title">Золотая Чаша</h3>
-            <p class="service-card__desc">Редизайн интернет-магазина с удобной навигацией по категориям и продуманными пользовательскими сценариями.</p>
-            <a href="../projects/golden-cup.html" class="project-card__btn">Открыть кейс</a>
           </article>
         </div>
       </div>
