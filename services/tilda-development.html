@@ -3,19 +3,19 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Создаю сайты на Tilda под ключ: лендинги, сайты-визитки и многостраничные проекты. Zero Block, адаптивный дизайн, формы, анимация, базовое SEO и подготовка к публикации.">
-  <title>Разработка сайтов на Tilda под ключ | WINTER.DESIGN</title>
+  <meta name="description" content="Разработка сайтов на Tilda под ключ: лендинги, визитки и многостраничные проекты. Zero Block, адаптив, формы, анимация, базовое SEO и подготовка к публикации.">
+  <title>Разработка сайтов на Tilda на заказ | Сайты под ключ — WINTER.DESIGN</title>
   <link rel="canonical" href="https://winter-design.ru/services/tilda-development.html">
-  <meta property="og:title" content="Разработка сайтов на Tilda под ключ | WINTER.DESIGN">
-  <meta property="og:description" content="Создаю сайты на Tilda под ключ: лендинги, сайты-визитки и многостраничные проекты. Zero Block, адаптивный дизайн, формы, анимация, базовое SEO и подготовка к публикации.">
+  <meta property="og:title" content="Разработка сайтов на Tilda на заказ | Сайты под ключ — WINTER.DESIGN">
+  <meta property="og:description" content="Разработка сайтов на Tilda под ключ: лендинги, визитки и многостраничные проекты. Zero Block, адаптив, формы, анимация, базовое SEO и подготовка к публикации.">
   <meta property="og:image" content="https://winter-design.ru/images/opengraph.png">
   <meta property="og:url" content="https://winter-design.ru/services/tilda-development.html">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="WINTER.DESIGN">
   <meta property="og:locale" content="ru_RU">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Разработка сайтов на Tilda под ключ | WINTER.DESIGN">
-  <meta name="twitter:description" content="Создаю сайты на Tilda под ключ: лендинги, сайты-визитки и многостраничные проекты. Zero Block, адаптивный дизайн, формы, анимация, базовое SEO и подготовка к публикации.">
+  <meta name="twitter:title" content="Разработка сайтов на Tilda на заказ | Сайты под ключ — WINTER.DESIGN">
+  <meta name="twitter:description" content="Разработка сайтов на Tilda под ключ: лендинги, визитки и многостраничные проекты. Zero Block, адаптив, формы, анимация, базовое SEO и подготовка к публикации.">
   <meta name="twitter:image" content="https://winter-design.ru/images/opengraph.png">
   <link rel="icon" href="../assets/favicon/favicon.svg" type="image/svg+xml">
   <link rel="icon" href="../assets/favicon/favicon-32x32.png" type="image/png" sizes="32x32">
@@ -29,6 +29,38 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../assets/css/style.css">
+  <style>
+    #service-includes .services__grid,
+    #faq .services__grid {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    #process .process__timeline {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    #cases .services__grid {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    @media (max-width: 1024px) {
+      #service-includes .services__grid,
+      #faq .services__grid,
+      #process .process__timeline,
+      #cases .services__grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 768px) {
+      #service-includes .services__grid,
+      #faq .services__grid,
+      #process .process__timeline,
+      #cases .services__grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
 </head>
 <body>
 
@@ -232,17 +264,17 @@
         <div class="services__grid">
           <article class="service-card reveal">
             <h3 class="service-card__title">SweetBakery</h3>
-            <p class="service-card__desc">Лендинг с аккуратной структурой, адаптивной сеткой и проработанными визуальными акцентами под задачи бренда.</p>
+            <p class="service-card__desc">Лендинг на Tilda с Zero Block: аккуратная структура, адаптивная сетка и проработанные визуальные акценты.</p>
             <a href="../projects/sweetbakery.html" class="project-card__btn">Открыть кейс</a>
           </article>
           <article class="service-card reveal reveal--delay">
             <h3 class="service-card__title">Interstellar</h3>
-            <p class="service-card__desc">Промо-страница с выразительной стилистикой, продуманной композицией блоков и адаптивной версией.</p>
+            <p class="service-card__desc">Промо-лендинг на Tilda с выразительной стилистикой, продуманной композицией блоков и адаптивной версией.</p>
             <a href="../projects/interstellar.html" class="project-card__btn">Открыть кейс</a>
           </article>
           <article class="service-card reveal reveal--delay-2">
             <h3 class="service-card__title">Золотая Чаша</h3>
-            <p class="service-card__desc">Многостраничный проект с удобной навигацией, каталогом и фокусом на понятный пользовательский путь.</p>
+            <p class="service-card__desc">Многостраничный интернет-магазин на Tilda с Zero Block, удобной навигацией и каталогом.</p>
             <a href="../projects/golden-cup.html" class="project-card__btn">Открыть кейс</a>
           </article>
         </div>
@@ -264,15 +296,15 @@
           </article>
 
           <article class="service-card reveal reveal--delay">
-            <h3 class="service-card__title">Дизайн лендингов</h3>
-            <p class="service-card__desc">Разработка дизайна посадочных страниц с акцентом на понятную подачу предложения и целевое действие.</p>
-            <a href="landing-page-design.html" class="project-card__btn">Подробнее об услуге</a>
-          </article>
-
-          <article class="service-card reveal reveal--delay-2">
             <h3 class="service-card__title">UX/UI-дизайн</h3>
             <p class="service-card__desc">Проектирование удобных интерфейсов, пользовательских сценариев и адаптивных экранов.</p>
             <a href="ux-ui-design.html" class="project-card__btn">Подробнее об услуге</a>
+          </article>
+
+          <article class="service-card reveal reveal--delay-2">
+            <h3 class="service-card__title">Дизайн лендингов</h3>
+            <p class="service-card__desc">Разработка дизайна посадочных страниц с акцентом на понятную подачу предложения и целевое действие.</p>
+            <a href="landing-page-design.html" class="project-card__btn">Подробнее об услуге</a>
           </article>
         </div>
       </div>
