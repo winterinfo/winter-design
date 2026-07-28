@@ -29,6 +29,23 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../assets/css/style.css">
+  <style>
+    #process .process__timeline {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    @media (max-width: 1024px) {
+      #process .process__timeline {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 768px) {
+      #process .process__timeline {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
 </head>
 <body>
 
