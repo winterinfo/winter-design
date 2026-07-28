@@ -3,20 +3,20 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Услуги WINTER.DESIGN — веб-дизайн, UI/UX, разработка на Tilda и AI-решения для роста бизнеса.">
-  <title>Услуги — WINTER.DESIGN</title>
+  <meta name="description" content="Услуги веб-дизайнера: дизайн сайтов, UX/UI, лендинги, редизайн, разработка на Tilda и работа с AI-инструментами. Продуманный дизайн под задачи бизнеса.">
+  <title>Услуги веб-дизайнера | Дизайн и разработка сайтов — WINTER.DESIGN</title>
   <link rel="canonical" href="https://winter-design.ru/services.html">
-  <meta property="og:title" content="Услуги — WINTER.DESIGN">
-  <meta property="og:description" content="Услуги WINTER.DESIGN — веб-дизайн, UI/UX, разработка на Tilda и AI-решения для роста бизнеса.">
-  <meta property="og:image" content="images/opengraph.png">
+  <meta property="og:title" content="Услуги веб-дизайнера — WINTER.DESIGN">
+  <meta property="og:description" content="Дизайн и разработка современных сайтов: от структуры и прототипа до адаптивного дизайна и запуска.">
+  <meta property="og:image" content="https://winter-design.ru/images/opengraph.png">
   <meta property="og:url" content="https://winter-design.ru/services.html">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="WINTER.DESIGN">
   <meta property="og:locale" content="ru_RU">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Услуги — WINTER.DESIGN">
-  <meta name="twitter:description" content="Услуги WINTER.DESIGN — веб-дизайн, UI/UX, разработка на Tilda и AI-решения для роста бизнеса.">
-  <meta name="twitter:image" content="images/opengraph.png">
+  <meta name="twitter:title" content="Услуги веб-дизайнера — WINTER.DESIGN">
+  <meta name="twitter:description" content="Дизайн и разработка современных сайтов: от структуры и прототипа до адаптивного дизайна и запуска.">
+  <meta name="twitter:image" content="https://winter-design.ru/images/opengraph.png">
   <link rel="icon" href="assets/favicon/favicon.svg" type="image/svg+xml">
   <link rel="icon" href="assets/favicon/favicon-32x32.png" type="image/png" sizes="32x32">
   <link rel="icon" href="assets/favicon/favicon-16x16.png" type="image/png" sizes="16x16">
@@ -29,6 +29,51 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/style.css">
+  <style>
+    #main-services .services__grid,
+    #work-includes .services__grid,
+    #faq .services__grid {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    #process .process__timeline {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    #choose-service .approach__grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    #why .approach__grid {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    #cases .portfolio__grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    @media (max-width: 1024px) {
+      #main-services .services__grid,
+      #work-includes .services__grid,
+      #faq .services__grid,
+      #process .process__timeline,
+      #why .approach__grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 768px) {
+      #main-services .services__grid,
+      #work-includes .services__grid,
+      #faq .services__grid,
+      #process .process__timeline,
+      #choose-service .approach__grid,
+      #why .approach__grid,
+      #cases .portfolio__grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
   <!-- Yandex.Metrika counter -->
   <script type="text/javascript">
     (function(m,e,t,r,i,k,a){
@@ -58,7 +103,7 @@
           <li><a href="index.html#portfolio" class="nav__link">Портфолио</a></li>
           <li><a href="services.html" class="nav__link active" aria-current="page">Услуги</a></li>
           <li><a href="index.html#about" class="nav__link">Обо мне</a></li>
-          <li><a href="index.html#contact" class="nav__link nav__link--cta">Контакты</a></li>
+          <li><a href="#contact" class="nav__link nav__link--cta">Контакты</a></li>
         </ul>
       </nav>
 
@@ -76,17 +121,14 @@
         <div class="hero__layout">
           <div class="hero__content reveal">
             <p class="hero__label">Услуги · WINTER.DESIGN</p>
-            <h1 class="hero__title">
-              Дизайн и разработка<br>
-              под задачи <em>бизнеса</em>
-            </h1>
+            <h1 class="hero__title">Услуги веб-дизайнера</h1>
             <p class="hero__desc">
-              Проектирую современные сайты и интерфейсы — от исследования
-              и прототипа до адаптивной реализации на Tilda и подготовки к публикации.
+              Проектирую современные сайты для бизнеса: от структуры и UX до визуального дизайна,
+              адаптивных версий и запуска.
             </p>
             <div class="hero__actions">
               <a href="#contact" class="btn btn--primary">Обсудить проект</a>
-              <a href="index.html#portfolio" class="btn btn--ghost">Смотреть портфолио</a>
+              <a href="index.html#portfolio" class="btn btn--ghost">Посмотреть проекты</a>
             </div>
           </div>
 
@@ -109,96 +151,134 @@
     <section class="section services" id="main-services" aria-labelledby="main-services-title">
       <div class="container">
         <div class="section__header reveal">
-          <span class="section__tag">Основные услуги</span>
-          <h2 class="section__title" id="main-services-title">Что входит в работу</h2>
-          <p class="section__subtitle">Ключевые направления, с которых начинается большинство проектов WINTER.DESIGN.</p>
+          <span class="section__tag">Каталог</span>
+          <h2 class="section__title" id="main-services-title">Все услуги</h2>
+          <p class="section__subtitle">Выберите направление — на отдельных страницах подробно описаны формат работы, этапы и примеры проектов.</p>
         </div>
         <div class="services__grid">
           <a href="services/web-design.html" class="service-card reveal">
             <div class="service-card__num">01</div>
             <h3 class="service-card__title">Веб-дизайн</h3>
-            <p class="service-card__desc">Создаю современные лендинги, корпоративные сайты и интернет-магазины с продуманной структурой, выразительным визуальным стилем и акцентом на удобство пользователя.</p>
+            <p class="service-card__desc">Проектирование визуально сильных и понятных сайтов с учётом задач бизнеса, аудитории и пользовательских сценариев.</p>
+            <span class="project-card__btn">Подробнее</span>
           </a>
           <a href="services/ux-ui-design.html" class="service-card reveal reveal--delay">
             <div class="service-card__num">02</div>
-            <h3 class="service-card__title">UI/UX-дизайн</h3>
-            <p class="service-card__desc">Проектирую пользовательские сценарии, создаю прототипы и интерфейсы, которые помогают посетителю быстро ориентироваться и выполнять целевые действия.</p>
+            <h3 class="service-card__title">UX/UI-дизайн</h3>
+            <p class="service-card__desc">Разработка структуры, прототипов и интерфейсов, которыми удобно пользоваться на компьютере, планшете и смартфоне.</p>
+            <span class="project-card__btn">Подробнее</span>
           </a>
-          <a href="services/tilda-development.html" class="service-card reveal reveal--delay-2">
+          <a href="services/landing-page-design.html" class="service-card reveal reveal--delay-2">
             <div class="service-card__num">03</div>
-            <h3 class="service-card__title">Разработка на Tilda</h3>
-            <p class="service-card__desc">Переношу дизайн в Tilda, создаю адаптивные страницы, настраиваю формы, Zero Block, базовое SEO и подготавливаю проекты к публикации.</p>
-          </a>
-          <a href="services/ai-web-design.html" class="service-card reveal reveal--delay-3">
-            <div class="service-card__num">04</div>
-            <h3 class="service-card__title">AI в веб-дизайне</h3>
-            <p class="service-card__desc">Использую Cursor AI и современные инструменты искусственного интеллекта для ускорения разработки, поиска решений, подготовки контента и повышения качества проектов.</p>
-          </a>
-          <a href="services/landing-page-design.html" class="service-card reveal">
-            <div class="service-card__num">05</div>
             <h3 class="service-card__title">Дизайн лендингов</h3>
-            <p class="service-card__desc">Разрабатываю современные лендинги с высокой конверсией. Анализ аудитории, структура, UX, UI, адаптивный дизайн и подготовка к разработке.</p>
+            <p class="service-card__desc">Одностраничные сайты для презентации продукта, услуги, мероприятия или рекламного предложения.</p>
+            <span class="project-card__btn">Подробнее</span>
           </a>
-          <a href="services/website-redesign.html" class="service-card reveal">
-            <div class="service-card__num">06</div>
+          <a href="services/website-redesign.html" class="service-card reveal reveal--delay-3">
+            <div class="service-card__num">04</div>
             <h3 class="service-card__title">Редизайн сайтов</h3>
-            <p class="service-card__desc">Обновляю устаревшие сайты, улучшаю визуальный стиль, структуру, UX и адаптивность, сохраняя сильные стороны существующего проекта.</p>
+            <p class="service-card__desc">Обновление устаревшего сайта: визуальный стиль, структура, навигация, адаптивность и общее восприятие.</p>
+            <span class="project-card__btn">Подробнее</span>
+          </a>
+          <a href="services/tilda-development.html" class="service-card reveal">
+            <div class="service-card__num">05</div>
+            <h3 class="service-card__title">Разработка на Tilda</h3>
+            <p class="service-card__desc">Создание и запуск сайтов на Tilda: дизайн, адаптивные версии, формы, базовая SEO-настройка и подключение сервисов.</p>
+            <span class="project-card__btn">Подробнее</span>
+          </a>
+          <a href="services/ai-web-design.html" class="service-card reveal reveal--delay">
+            <div class="service-card__num">06</div>
+            <h3 class="service-card__title">AI в веб-дизайне</h3>
+            <p class="service-card__desc">Использование AI-инструментов для ускорения анализа, проектирования, работы с текстами и разработки под контролем дизайнера.</p>
+            <span class="project-card__btn">Подробнее</span>
           </a>
         </div>
       </div>
     </section>
 
-    <section class="section" id="extra-services" aria-labelledby="extra-services-title">
+    <section class="section" id="choose-service" aria-labelledby="choose-service-title">
       <div class="container">
         <div class="section__header reveal">
-          <span class="section__tag">Дополнительные услуги</span>
-          <h2 class="section__title" id="extra-services-title">Что усиливает проект</h2>
-          <p class="section__subtitle">Сопутствующие задачи, которые помогают сделать сайт цельным, удобным и готовым к росту.</p>
+          <span class="section__tag">Подбор услуги</span>
+          <h2 class="section__title" id="choose-service-title">Не знаете, какая услуга подходит?</h2>
+          <p class="section__subtitle">Четыре частых сценария — с рекомендациями и ссылками на подходящие страницы.</p>
         </div>
         <div class="approach__grid">
           <article class="service-card reveal">
-            <h3 class="service-card__title">Адаптивный дизайн</h3>
-            <p class="service-card__desc">Прорабатываю версии для desktop, tablet и mobile, чтобы интерфейс оставался читаемым и удобным на любом экране — включая узкие устройства от 360px.</p>
+            <h3 class="service-card__title">Нужен новый сайт с нуля</h3>
+            <p class="service-card__desc">
+              Рекомендация:
+              <a href="services/web-design.html">Веб-дизайн</a>
+              или
+              <a href="services/tilda-development.html">разработка на Tilda</a>
+              — в зависимости от того, нужен макет в Figma или готовый сайт на платформе.
+            </p>
           </article>
           <article class="service-card reveal reveal--delay">
-            <h3 class="service-card__title">Прототипирование</h3>
-            <p class="service-card__desc">Собираю структуру и интерактивные прототипы в Figma до финального UI — это снижает риски правок и помогает согласовать логику заранее.</p>
+            <h3 class="service-card__title">Нужна одна продающая страница</h3>
+            <p class="service-card__desc">
+              Рекомендация:
+              <a href="services/landing-page-design.html">Дизайн лендинга</a>
+              — для акции, продукта, услуги или рекламной кампании.
+            </p>
           </article>
           <article class="service-card reveal reveal--delay-2">
-            <h3 class="service-card__title">Подготовка к публикации</h3>
-            <p class="service-card__desc">Настраиваю формы, базовое SEO, мета-данные и финальную проверку перед запуском, чтобы проект был готов к работе сразу после релиза.</p>
+            <h3 class="service-card__title">Сайт уже существует, но выглядит устаревшим</h3>
+            <p class="service-card__desc">
+              Рекомендация:
+              <a href="services/website-redesign.html">Редизайн сайта</a>
+              — обновление визуала, структуры и пользовательского опыта.
+            </p>
+          </article>
+          <article class="service-card reveal reveal--delay-3">
+            <h3 class="service-card__title">Нужно улучшить структуру и удобство интерфейса</h3>
+            <p class="service-card__desc">
+              Рекомендация:
+              <a href="services/ux-ui-design.html">UX/UI-дизайн</a>
+              — прототипирование, сценарии и проработка интерфейса.
+            </p>
           </article>
         </div>
       </div>
     </section>
 
-    <section class="section services" id="exclusive" aria-labelledby="exclusive-title">
+    <section class="section services" id="work-includes" aria-labelledby="work-includes-title">
       <div class="container">
         <div class="section__header reveal">
-          <span class="section__tag">Эксклюзивные решения</span>
-          <h2 class="section__title" id="exclusive-title">Эксклюзивные решения WINTER.DESIGN</h2>
-          <p class="section__subtitle">Подход, который отличает работу студии: системность, внимание к деталям и современные инструменты.</p>
+          <span class="section__tag">Состав работы</span>
+          <h2 class="section__title" id="work-includes-title">Что входит в работу</h2>
+          <p class="section__subtitle">Базовые этапы, которые помогают довести проект от задачи до готового результата.</p>
         </div>
         <div class="services__grid">
           <article class="service-card reveal">
             <div class="service-card__num">01</div>
-            <h3 class="service-card__title">Полный цикл проекта</h3>
-            <p class="service-card__desc">Исследование, структура, прототип, UI, адаптив и реализация на Tilda — один подрядчик на всём пути от идеи до публикации.</p>
+            <h3 class="service-card__title">Анализ задачи</h3>
+            <p class="service-card__desc">Разбираю цели проекта, контекст бизнеса и ожидаемый результат, чтобы дизайн решал конкретную задачу.</p>
           </article>
           <article class="service-card reveal reveal--delay">
             <div class="service-card__num">02</div>
-            <h3 class="service-card__title">AI-ускоренная разработка</h3>
-            <p class="service-card__desc">Cursor AI помогает быстрее находить решения, готовить контент и повышать качество без потери контроля над дизайном и логикой продукта.</p>
+            <h3 class="service-card__title">Изучение аудитории</h3>
+            <p class="service-card__desc">Учитываю, кто будет пользоваться сайтом, какие действия важны и что должно быть понятно с первых секунд.</p>
           </article>
           <article class="service-card reveal reveal--delay-2">
             <div class="service-card__num">03</div>
-            <h3 class="service-card__title">Связка Figma + Tilda</h3>
-            <p class="service-card__desc">Проектирую в Figma и аккуратно переношу решения в Tilda с Zero Block, чтобы визуал и вёрстка оставались согласованными.</p>
+            <h3 class="service-card__title">Структура и прототип</h3>
+            <p class="service-card__desc">Проектирую логику страниц и блоков до визуального дизайна, чтобы согласовать сценарий заранее.</p>
           </article>
           <article class="service-card reveal reveal--delay-3">
             <div class="service-card__num">04</div>
-            <h3 class="service-card__title">Индивидуальный визуальный язык</h3>
-            <p class="service-card__desc">Не использую шаблонные паттерны: типографика, ритм и композиция собираются под бренд и задачу конкретного бизнеса.</p>
+            <h3 class="service-card__title">Визуальная концепция</h3>
+            <p class="service-card__desc">Подбираю стилистику, типографику и композиционные решения под бренд и задачу проекта.</p>
+          </article>
+          <article class="service-card reveal">
+            <div class="service-card__num">05</div>
+            <h3 class="service-card__title">Адаптивный дизайн</h3>
+            <p class="service-card__desc">Готовлю версии для desktop, tablet и mobile, чтобы сайт оставался удобным на разных экранах.</p>
+          </article>
+          <article class="service-card reveal reveal--delay">
+            <div class="service-card__num">06</div>
+            <h3 class="service-card__title">Подготовка к запуску</h3>
+            <p class="service-card__desc">Организую макет, материалы и пояснения для передачи в вёрстку, сборку на Tilda или публикации.</p>
           </article>
         </div>
       </div>
@@ -209,28 +289,38 @@
         <div class="section__header reveal">
           <span class="section__tag">Процесс</span>
           <h2 class="section__title" id="process-title">Как проходит работа</h2>
-          <p class="section__subtitle">Понятный поэтапный сценарий — от анализа задачи до запуска готового сайта.</p>
+          <p class="section__subtitle">Понятный поэтапный сценарий — от первого обсуждения до передачи результата.</p>
         </div>
         <div class="process__timeline">
           <div class="process__step reveal">
             <div class="process__step-num">01</div>
-            <h3>Исследование</h3>
-            <p>Анализирую аудиторию, конкурентов и бизнес-цели. Формирую стратегию.</p>
+            <h3>Обсуждение задачи</h3>
+            <p>Уточняем цели, сроки, формат и ожидания от будущего сайта или дизайна.</p>
           </div>
           <div class="process__step reveal reveal--delay">
             <div class="process__step-num">02</div>
-            <h3>Концепция</h3>
-            <p>Создаю moodboard, wireframes и определяю визуальное направление.</p>
+            <h3>Анализ проекта и аудитории</h3>
+            <p>Изучаю нишу, контент и пользовательские задачи, чтобы выстроить логику решения.</p>
           </div>
           <div class="process__step reveal reveal--delay-2">
             <div class="process__step-num">03</div>
-            <h3>Дизайн</h3>
-            <p>Разрабатываю UI в Figma, прорабатываю все состояния и адаптив.</p>
+            <h3>Структура и прототип</h3>
+            <p>Собираю каркас страниц и согласовываю порядок блоков до этапа визуала.</p>
           </div>
           <div class="process__step reveal reveal--delay-3">
             <div class="process__step-num">04</div>
-            <h3>Запуск</h3>
-            <p>Переношу проект в Tilda, проверяю детали и помогаю с релизом.</p>
+            <h3>Дизайн-концепция</h3>
+            <p>Разрабатываю визуальный стиль, типографику и оформление ключевых экранов.</p>
+          </div>
+          <div class="process__step reveal">
+            <div class="process__step-num">05</div>
+            <h3>Адаптивные версии</h3>
+            <p>Дорабатываю макет для планшетов и смартфонов с сохранением логики и читаемости.</p>
+          </div>
+          <div class="process__step reveal reveal--delay">
+            <div class="process__step-num">06</div>
+            <h3>Подготовка и передача результата</h3>
+            <p>Передаю финальные материалы, пояснения и рекомендации для следующего этапа запуска.</p>
           </div>
         </div>
       </div>
@@ -240,22 +330,150 @@
       <div class="container">
         <div class="section__header reveal">
           <span class="section__tag">Преимущества</span>
-          <h2 class="section__title" id="why-title">Почему выбирают WINTER.DESIGN</h2>
-          <p class="section__subtitle">Принципы, на которых строится каждый проект — от первой встречи до публикации.</p>
+          <h2 class="section__title" id="why-title">Почему WINTER.DESIGN</h2>
+          <p class="section__subtitle">Реальные принципы работы — без шаблонных обещаний и выдуманных цифр.</p>
         </div>
         <div class="approach__grid">
           <article class="service-card reveal">
-            <h3 class="service-card__title">Понимание задачи</h3>
-            <p class="service-card__desc">Каждый проект начинается с изучения целей, аудитории и содержания. Это помогает принимать осознанные дизайнерские решения, а не опираться только на визуальные приёмы.</p>
+            <h3 class="service-card__title">Индивидуальная работа над проектом</h3>
+            <p class="service-card__desc">Каждый проект ведётся с вниманием к задаче, а не по универсальному шаблону.</p>
           </article>
           <article class="service-card reveal reveal--delay">
-            <h3 class="service-card__title">Системный процесс</h3>
-            <p class="service-card__desc">Работа строится по понятному этапному сценарию: исследование, структура, прототипирование, UI-дизайн, адаптивные версии и подготовка проекта к публикации.</p>
+            <h3 class="service-card__title">Внимание к структуре и удобству</h3>
+            <p class="service-card__desc">Сначала логика и сценарии пользователя, затем визуал — чтобы сайт был понятным.</p>
           </article>
           <article class="service-card reveal reveal--delay-2">
-            <h3 class="service-card__title">Внимание к деталям</h3>
-            <p class="service-card__desc">Аккуратная типографика, единая дизайн-система, адаптивность и последовательность помогают создавать современные интерфейсы, которыми удобно пользоваться.</p>
+            <h3 class="service-card__title">Адаптивный дизайн</h3>
+            <p class="service-card__desc">Прорабатываю версии для разных устройств, включая узкие экраны от 360px.</p>
           </article>
+          <article class="service-card reveal reveal--delay-3">
+            <h3 class="service-card__title">Современные инструменты</h3>
+            <p class="service-card__desc">Работаю в Figma и Tilda, использую Cursor AI и Adobe — там, где это ускоряет и улучшает результат.</p>
+          </article>
+          <article class="service-card reveal">
+            <h3 class="service-card__title">Понятная коммуникация</h3>
+            <p class="service-card__desc">Обсуждаем этапы, правки и решения прозрачно — без лишней сложности в процессе.</p>
+          </article>
+          <article class="service-card reveal reveal--delay">
+            <h3 class="service-card__title">Контроль результата дизайнером</h3>
+            <p class="service-card__desc">Финальные решения по структуре, визуалу и качеству принимаются вручную, даже при использовании AI.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section portfolio" id="cases" aria-labelledby="cases-title">
+      <div class="container">
+        <div class="section__header reveal">
+          <span class="section__tag">Портфолио</span>
+          <h2 class="section__title" id="cases-title">Примеры проектов</h2>
+          <p class="section__subtitle">Четыре разных формата — от корпоративного сайта до лендинга и интернет-магазина.</p>
+        </div>
+        <div class="portfolio__grid">
+          <article class="project-card reveal">
+            <div class="project-card__media">
+              <img src="assets/images/projects/russian-standard.png" alt="Русский Стандарт — превью корпоративного сайта" class="project-card__image" loading="lazy">
+            </div>
+            <div class="project-card__info">
+              <div class="project-card__meta">
+                <span class="project-card__tag">Корпоративный сайт</span>
+                <span class="project-card__year">2025</span>
+              </div>
+              <h3 class="project-card__title">Русский Стандарт</h3>
+              <p class="project-card__desc">Концепт редизайна банковского сайта с акцентом на UX и визуальную ясность.</p>
+              <a href="projects/russian-standard.html" class="project-card__btn">Подробнее</a>
+            </div>
+          </article>
+          <article class="project-card reveal reveal--delay">
+            <div class="project-card__media">
+              <img src="assets/images/projects/sweetbakery.png" alt="SweetBakery — превью лендинга кондитерской" class="project-card__image" loading="lazy">
+            </div>
+            <div class="project-card__info">
+              <div class="project-card__meta">
+                <span class="project-card__tag">Лендинг</span>
+                <span class="project-card__year">2024</span>
+              </div>
+              <h3 class="project-card__title">SweetBakery</h3>
+              <p class="project-card__desc">Лендинг кондитерской с выверенной структурой и мягкой визуальной подачей.</p>
+              <a href="projects/sweetbakery.html" class="project-card__btn">Подробнее</a>
+            </div>
+          </article>
+          <article class="project-card reveal reveal--delay-2">
+            <div class="project-card__media">
+              <img src="assets/images/projects/HERO.png" alt="KODAK — превью лендинга фотостудии" class="project-card__image" loading="lazy">
+            </div>
+            <div class="project-card__info">
+              <div class="project-card__meta">
+                <span class="project-card__tag">Лендинг</span>
+                <span class="project-card__year">2024</span>
+              </div>
+              <h3 class="project-card__title">KODAK</h3>
+              <p class="project-card__desc">Лендинг фотостудии в стиле современного минимализма с адаптивными экранами.</p>
+              <a href="projects/kodak.html" class="project-card__btn">Подробнее</a>
+            </div>
+          </article>
+          <article class="project-card reveal reveal--delay-3">
+            <div class="project-card__media">
+              <img src="assets/images/projects/golden-cup.png" alt="Золотая Чаша — превью интернет-магазина" class="project-card__image" loading="lazy">
+            </div>
+            <div class="project-card__info">
+              <div class="project-card__meta">
+                <span class="project-card__tag">Интернет-магазин</span>
+                <span class="project-card__year">2025</span>
+              </div>
+              <h3 class="project-card__title">Золотая Чаша</h3>
+              <p class="project-card__desc">Интернет-магазин чая и кофе с удобной навигацией и каталогом.</p>
+              <a href="projects/golden-cup.html" class="project-card__btn">Подробнее</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="faq" aria-labelledby="faq-title">
+      <div class="container">
+        <div class="section__header reveal">
+          <span class="section__tag">FAQ</span>
+          <h2 class="section__title" id="faq-title">Частые вопросы</h2>
+        </div>
+        <div class="services__grid">
+          <article class="service-card reveal">
+            <h3 class="service-card__title">Сколько стоит разработка дизайна сайта?</h3>
+            <p class="service-card__desc">Стоимость зависит от типа проекта, количества страниц, глубины проработки UX/UI и необходимости адаптивных версий. После обсуждения задачи предложу ориентир по бюджету.</p>
+          </article>
+          <article class="service-card reveal reveal--delay">
+            <h3 class="service-card__title">От чего зависит срок работы?</h3>
+            <p class="service-card__desc">На сроки влияют объём проекта, скорость согласований, наличие готового контента и выбранный формат — только дизайн или дизайн с реализацией на Tilda.</p>
+          </article>
+          <article class="service-card reveal reveal--delay-2">
+            <h3 class="service-card__title">Можно ли заказать только дизайн без разработки?</h3>
+            <p class="service-card__desc">Да. Могу подготовить макет в Figma с адаптивными экранами и передать его для дальнейшей вёрстки или сборки вашей командой.</p>
+          </article>
+          <article class="service-card reveal reveal--delay-3">
+            <h3 class="service-card__title">Делаете ли вы адаптивные версии?</h3>
+            <p class="service-card__desc">Да. Адаптив для desktop, tablet и mobile входит в работу над дизайном, чтобы интерфейс оставался удобным на всех устройствах.</p>
+          </article>
+          <article class="service-card reveal">
+            <h3 class="service-card__title">Можно ли доработать уже существующий сайт?</h3>
+            <p class="service-card__desc">Да. Для обновления действующего проекта подойдёт редизайн или точечная UX/UI-проработка — в зависимости от масштаба изменений.</p>
+          </article>
+          <article class="service-card reveal reveal--delay">
+            <h3 class="service-card__title">Какую услугу выбрать, если пока нет технического задания?</h3>
+            <p class="service-card__desc">Напишите о задаче в свободной форме — помогу определить подходящий формат: веб-дизайн, лендинг, UX/UI, редизайн или разработку на Tilda.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section services" id="final-cta" aria-labelledby="final-cta-title">
+      <div class="container">
+        <div class="section__header reveal">
+          <span class="section__tag">Следующий шаг</span>
+          <h2 class="section__title" id="final-cta-title">Обсудим ваш проект?</h2>
+          <p class="section__subtitle">Расскажите, какой сайт или дизайн вам нужен. Я помогу определить подходящий формат работы и предложу следующий шаг.</p>
+          <div class="hero__actions">
+            <a href="#contact" class="btn btn--primary">Оставить заявку</a>
+          </div>
         </div>
       </div>
     </section>
@@ -264,7 +482,7 @@
       <div class="container">
         <div class="contact__grid">
           <div class="contact__info reveal">
-            <span class="section__tag">Обсудить проект</span>
+            <span class="section__tag">Контакты</span>
             <h2 class="section__title">Готовы начать<br>ваш следующий <em>проект</em>?</h2>
             <p>Расскажите о задаче. Оставьте телефон или e-mail — я свяжусь с вами, чтобы обсудить формат работы и предложить оптимальное решение.</p>
             <ul class="contact__details">
