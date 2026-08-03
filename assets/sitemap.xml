@@ -41,6 +41,11 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://winter-design.ru/services/augmented-reality.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://winter-design.ru/projects/russian-standard.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>

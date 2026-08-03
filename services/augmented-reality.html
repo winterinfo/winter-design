@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Дополненная реальность (AR) для бизнеса: интерактивные решения для рекламы, полиграфии, образования и презентаций. — WINTER.DESIGN">
+  <title>Дополненная реальность (AR) — WINTER.DESIGN</title>
+  <link rel="canonical" href="https://winter-design.ru/services/augmented-reality.html">
+  <meta property="og:title" content="Дополненная реальность (AR) — WINTER.DESIGN">
+  <meta property="og:description" content="Интерактивные AR-решения для бизнеса, рекламы, полиграфии, образования и презентаций.">
+  <meta property="og:image" content="https://winter-design.ru/images/opengraph.png">
+  <meta property="og:url" content="https://winter-design.ru/services/augmented-reality.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="WINTER.DESIGN">
+  <meta property="og:locale" content="ru_RU">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Дополненная реальность (AR) — WINTER.DESIGN">
+  <meta name="twitter:description" content="Интерактивные AR-решения для бизнеса, рекламы, полиграфии, образования и презентаций.">
+  <meta name="twitter:image" content="https://winter-design.ru/images/opengraph.png">
+  <link rel="icon" href="../assets/favicon/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="../assets/favicon/favicon-32x32.png" type="image/png" sizes="32x32">
+  <link rel="icon" href="../assets/favicon/favicon-16x16.png" type="image/png" sizes="16x16">
+  <link rel="shortcut icon" href="../assets/favicon/favicon.ico">
+  <link rel="apple-touch-icon" href="../assets/favicon/apple-touch-icon.png" sizes="180x180">
+  <link rel="manifest" href="../assets/favicon/site.webmanifest">
+  <meta name="theme-color" content="#0B1220">
+  <meta name="msapplication-TileColor" content="#0B1220">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <style>
+    .ar-hero-badge {
+      display: inline-flex;
+      align-items: center;
+      padding: 10px 18px;
+      margin-bottom: 28px;
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--color-accent-dark);
+      background: var(--color-surface);
+      border: 1px solid rgba(212, 137, 58, 0.28);
+      border-radius: 100px;
+    }
+
+    .ar-hero-note {
+      margin-top: -36px;
+      max-width: 42ch;
+      color: var(--color-text-muted);
+      font-size: 0.95rem;
+      line-height: 1.65;
+    }
+
+    .hero .section__subtitle {
+      margin-top: -20px;
+      margin-bottom: 36px;
+      max-width: 520px;
+    }
+
+    .ar-demo {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 420px;
+      padding: 48px 32px;
+      text-align: center;
+      background: linear-gradient(160deg, #fff 0%, #fdf8f1 100%);
+      border: 1px dashed rgba(212, 137, 58, 0.35);
+      border-radius: var(--radius-md);
+    }
+
+    .ar-demo__title {
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      color: var(--color-accent-dark);
+      margin-bottom: 16px;
+    }
+
+    .ar-demo__caption {
+      max-width: 28ch;
+      color: var(--color-text-muted);
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+
+    @media (max-width: 900px) {
+      .ar-demo {
+        min-height: 280px;
+      }
+    }
+
+    #examples .project-card {
+      cursor: default;
+    }
+
+    #examples .ar-example-placeholder {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: 100%;
+      min-height: 100%;
+      background:
+        linear-gradient(160deg, rgba(253, 248, 241, 0.95) 0%, #f3efe8 100%);
+      color: var(--color-accent-dark);
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+
+    #examples .ar-example-btn {
+      pointer-events: none;
+      opacity: 0.85;
+    }
+
+    #examples .ar-example-btn::after {
+      content: none;
+    }
+
+    #applications .services__grid {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+
+    #applications .ar-app-icon {
+      display: block;
+      font-size: 1.75rem;
+      line-height: 1;
+      margin-bottom: 20px;
+    }
+
+    #applications .ar-why {
+      margin-top: calc(var(--space-block) + 24px);
+    }
+
+    #applications .ar-why .approach__grid {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+
+    #applications .ar-why .service-card {
+      padding: 28px 24px;
+    }
+
+    #applications .ar-why .service-card__title {
+      font-size: 1.05rem;
+      margin-bottom: 0;
+    }
+
+    @media (max-width: 1024px) {
+      #applications .services__grid,
+      #applications .ar-why .approach__grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 640px) {
+      #applications .services__grid,
+      #applications .ar-why .approach__grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    #benefits .ar-benefits-note {
+      margin-top: calc(var(--space-block) + 8px);
+      max-width: 62ch;
+      color: var(--color-text-muted);
+      font-size: 1.0625rem;
+      line-height: 1.75;
+    }
+
+    #process .process__timeline {
+      grid-template-columns: repeat(6, minmax(0, 1fr));
+      gap: 20px;
+    }
+
+    #process .process__step {
+      padding: 28px 20px;
+    }
+
+    #process .ar-deliverables {
+      margin-top: calc(var(--space-block) + 24px);
+    }
+
+    #process .ar-deliverables .approach__grid {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+
+    #process .ar-deliverables .service-card {
+      padding: 28px 24px;
+    }
+
+    #process .ar-deliverables .service-card__title {
+      font-size: 1.05rem;
+      margin-bottom: 0;
+    }
+
+    #process .ar-check {
+      display: block;
+      color: var(--color-accent-dark);
+      font-size: 1.1rem;
+      line-height: 1;
+      margin-bottom: 14px;
+    }
+
+    @media (max-width: 1100px) {
+      #process .process__timeline {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 24px;
+      }
+
+      #process .ar-deliverables .approach__grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 640px) {
+      #process .ar-deliverables .approach__grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a href="../index.html" class="logo">
+        <span class="logo__mark">W</span>
+        <span class="logo__text">WINTER.DESIGN</span>
+      </a>
+
+      <nav class="nav" id="nav" aria-label="Основная навигация">
+        <ul class="nav__list">
+          <li><a href="../index.html#hero" class="nav__link">Главная</a></li>
+          <li><a href="../index.html#portfolio" class="nav__link">Портфолио</a></li>
+          <li><a href="../services.html" class="nav__link">Услуги</a></li>
+          <li><a href="../index.html#about" class="nav__link">Обо мне</a></li>
+          <li><a href="../blog/index.html" class="nav__link">Блог</a></li>
+          <li><a href="../index.html#contact" class="nav__link nav__link--cta">Контакты</a></li>
+        </ul>
+      </nav>
+
+      <button class="burger" id="burger" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero" id="hero">
+      <div class="container hero__inner">
+        <div class="hero__layout">
+          <div class="hero__content reveal">
+            <p class="ar-hero-badge">Эксклюзивное направление WINTER.DESIGN</p>
+            <h1 class="hero__title">Дополненная реальность (AR)</h1>
+            <p class="hero__desc">
+              Превратите обычную печатную продукцию в интерактивный цифровой опыт. Фотографии, открытки, каталоги, упаковка и другие материалы могут оживать на экране смартфона, помогая привлечь внимание и произвести впечатление.
+            </p>
+            <p class="section__subtitle">Создайте современный интерактивный опыт, который удивляет, вовлекает и помогает вашему бренду выделиться.</p>
+            <div class="hero__actions">
+              <a href="#contact" class="btn btn--primary">Обсудить идею</a>
+            </div>
+            <p class="ar-hero-note">Современные AR-решения для бизнеса, образования, рекламы и презентаций.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="what-is-ar">
+      <div class="container">
+        <div class="section__header reveal">
+          <h2 class="section__title">Что такое дополненная реальность</h2>
+        </div>
+        <div class="about__grid">
+          <div class="about__text reveal">
+            <p>
+              Дополненная реальность — это способ сделать печатные материалы интерактивными. Достаточно навести смартфон на фотографию, открытку, каталог или упаковку — и на экране появляется дополнительный цифровой слой: видео, анимация, объёмный объект или другой контент.
+            </p>
+            <p>
+              Для бизнеса это возможность выделиться среди конкурентов и привлечь внимание аудитории. Обычная полиграфия или рекламный носитель превращается в запоминающийся опыт, который вызывает интерес и желание рассмотреть предложение подробнее.
+            </p>
+            <p>
+              Заказчик получает готовое AR-решение под свои материалы и задачи: от рекламной кампании и презентации продукта до образовательных материалов и специальных проектов. Всё оформляется так, чтобы аудитории было просто и приятно взаимодействовать с контентом.
+            </p>
+            <p>
+              Такой формат помогает произвести впечатление, усилить восприятие бренда и сделать коммуникацию живой — без сложных объяснений для конечного пользователя. Ниже — возможности применения и примеры использования, которые можно реализовать.
+            </p>
+          </div>
+          <div class="about__visual reveal reveal--delay">
+            <div class="ar-demo" role="img" aria-label="Плейсхолдер демонстрации дополненной реальности">
+              <span class="ar-demo__title">AR DEMO</span>
+              <p class="ar-demo__caption">Здесь будет демонстрация возможного сценария.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="applications">
+      <div class="container">
+        <div class="section__header reveal">
+          <h2 class="section__title">Возможности применения</h2>
+        </div>
+        <div class="services__grid">
+          <article class="service-card reveal">
+            <span class="ar-app-icon" aria-hidden="true">🏢</span>
+            <h3 class="service-card__title">Бизнес</h3>
+            <p class="service-card__desc">Презентация компаний, услуг и коммерческих предложений.</p>
+          </article>
+          <article class="service-card reveal reveal--delay">
+            <span class="ar-app-icon" aria-hidden="true">📦</span>
+            <h3 class="service-card__title">Упаковка</h3>
+            <p class="service-card__desc">Интерактивная упаковка товаров с видеопрезентацией.</p>
+          </article>
+          <article class="service-card reveal reveal--delay-2">
+            <span class="ar-app-icon" aria-hidden="true">📖</span>
+            <h3 class="service-card__title">Каталоги</h3>
+            <p class="service-card__desc">Печатные каталоги с цифровыми демонстрациями продукции.</p>
+          </article>
+          <article class="service-card reveal reveal--delay-3">
+            <span class="ar-app-icon" aria-hidden="true">🎓</span>
+            <h3 class="service-card__title">Образование</h3>
+            <p class="service-card__desc">Учебные материалы, книги и методические пособия — один из возможных сценариев.</p>
+          </article>
+          <article class="service-card reveal">
+            <span class="ar-app-icon" aria-hidden="true">🏛</span>
+            <h3 class="service-card__title">Музеи</h3>
+            <p class="service-card__desc">Экспонаты с дополнительной информацией и видеоматериалами.</p>
+          </article>
+          <article class="service-card reveal reveal--delay">
+            <span class="ar-app-icon" aria-hidden="true">🎁</span>
+            <h3 class="service-card__title">Подарки</h3>
+            <p class="service-card__desc">Поздравительные открытки, сувениры и памятные изделия.</p>
+          </article>
+          <article class="service-card reveal reveal--delay-2">
+            <span class="ar-app-icon" aria-hidden="true">📸</span>
+            <h3 class="service-card__title">Фотопродукция</h3>
+            <p class="service-card__desc">Выпускные альбомы, семейные фото и другие памятные форматы.</p>
+          </article>
+          <article class="service-card reveal reveal--delay-3">
+            <span class="ar-app-icon" aria-hidden="true">📢</span>
+            <h3 class="service-card__title">Реклама</h3>
+            <p class="service-card__desc">Буклеты, листовки и рекламная полиграфия нового поколения.</p>
+          </article>
+        </div>
+
+        <div class="ar-why">
+          <div class="section__header reveal">
+            <span class="section__tag">Эффект</span>
+            <h3 class="section__title">Почему это эффективно</h3>
+          </div>
+          <div class="approach__grid">
+            <article class="service-card reveal">
+              <h3 class="service-card__title">Привлекает внимание</h3>
+            </article>
+            <article class="service-card reveal reveal--delay">
+              <h3 class="service-card__title">Увеличивает вовлечённость</h3>
+            </article>
+            <article class="service-card reveal reveal--delay-2">
+              <h3 class="service-card__title">Помогает запомнить бренд</h3>
+            </article>
+            <article class="service-card reveal reveal--delay-3">
+              <h3 class="service-card__title">Создаёт современное впечатление</h3>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="benefits">
+      <div class="container">
+        <div class="section__header reveal">
+          <h2 class="section__title">Преимущества</h2>
+        </div>
+        <div class="approach__grid">
+          <article class="service-card reveal">
+            <div class="service-card__num">01</div>
+            <h3 class="service-card__title">Эффект «вау»</h3>
+            <p class="service-card__desc">Интерактивный формат вызывает интерес и помогает выделиться среди обычной печатной продукции.</p>
+          </article>
+          <article class="service-card reveal reveal--delay">
+            <div class="service-card__num">02</div>
+            <h3 class="service-card__title">Больше внимания</h3>
+            <p class="service-card__desc">Видео и анимация удерживают внимание дольше, чем статичное изображение.</p>
+          </article>
+          <article class="service-card reveal reveal--delay-2">
+            <div class="service-card__num">03</div>
+            <h3 class="service-card__title">Современная подача</h3>
+            <p class="service-card__desc">AR помогает представить продукт, услугу или идею в технологичном и запоминающемся формате.</p>
+          </article>
+          <article class="service-card reveal reveal--delay-3">
+            <div class="service-card__num">04</div>
+            <h3 class="service-card__title">Дополнительный контент</h3>
+            <p class="service-card__desc">К печатному материалу можно добавить видео, инструкции, презентации и другие цифровые материалы.</p>
+          </article>
+          <article class="service-card reveal">
+            <div class="service-card__num">05</div>
+            <h3 class="service-card__title">Гибкость применения</h3>
+            <p class="service-card__desc">Решение подходит для бизнеса, образования, рекламы, сувенирной продукции и мероприятий.</p>
+          </article>
+          <article class="service-card reveal reveal--delay">
+            <div class="service-card__num">06</div>
+            <h3 class="service-card__title">Рост ценности продукта</h3>
+            <p class="service-card__desc">Интерактивность делает обычный носитель более интересным и повышает его воспринимаемую ценность.</p>
+          </article>
+        </div>
+        <p class="ar-benefits-note reveal">Дополненная реальность не заменяет печатный материал, а усиливает его — добавляет движение, звук и интерактивный сценарий.</p>
+      </div>
+    </section>
+
+    <section class="section" id="examples">
+      <div class="container">
+        <div class="section__header reveal">
+          <h2 class="section__title">Примеры использования</h2>
+        </div>
+        <div class="portfolio__grid">
+          <article class="project-card reveal">
+            <div class="project-card__media">
+              <div class="ar-example-placeholder" aria-hidden="true">AR preview</div>
+            </div>
+            <div class="project-card__info">
+              <h3 class="project-card__title">Выпускной альбом</h3>
+              <p class="project-card__desc">Например, фотографии могут оживать и воспроизводить памятные видеоролики.</p>
+              <span class="project-card__btn ar-example-btn">Возможный сценарий</span>
+            </div>
+          </article>
+
+          <article class="project-card reveal reveal--delay">
+            <div class="project-card__media">
+              <div class="ar-example-placeholder" aria-hidden="true">AR preview</div>
+            </div>
+            <div class="project-card__info">
+              <h3 class="project-card__title">Поздравительная открытка</h3>
+              <p class="project-card__desc">Открытка может превратиться в интерактивное поздравление с видео.</p>
+              <span class="project-card__btn ar-example-btn">Возможный сценарий</span>
+            </div>
+          </article>
+
+          <article class="project-card reveal reveal--delay-2">
+            <div class="project-card__media">
+              <div class="ar-example-placeholder" aria-hidden="true">AR preview</div>
+            </div>
+            <div class="project-card__info">
+              <h3 class="project-card__title">Каталог продукции</h3>
+              <p class="project-card__desc">Печатный каталог может открывать видеопрезентации товаров.</p>
+              <span class="project-card__btn ar-example-btn">Возможный сценарий</span>
+            </div>
+          </article>
+
+          <article class="project-card reveal reveal--delay-3">
+            <div class="project-card__media">
+              <div class="ar-example-placeholder" aria-hidden="true">AR preview</div>
+            </div>
+            <div class="project-card__info">
+              <h3 class="project-card__title">Упаковка товара</h3>
+              <p class="project-card__desc">После наведения камеры может появиться презентация продукта.</p>
+              <span class="project-card__btn ar-example-btn">Возможный сценарий</span>
+            </div>
+          </article>
+
+          <article class="project-card reveal">
+            <div class="project-card__media">
+              <div class="ar-example-placeholder" aria-hidden="true">AR preview</div>
+            </div>
+            <div class="project-card__info">
+              <h3 class="project-card__title">Музейная экспозиция</h3>
+              <p class="project-card__desc">Экспонаты могут получить дополнительный цифровой контент.</p>
+              <span class="project-card__btn ar-example-btn">Возможный сценарий</span>
+            </div>
+          </article>
+
+          <article class="project-card reveal reveal--delay">
+            <div class="project-card__media">
+              <div class="ar-example-placeholder" aria-hidden="true">AR preview</div>
+            </div>
+            <div class="project-card__info">
+              <h3 class="project-card__title">Рекламная продукция</h3>
+              <p class="project-card__desc">Листовки, буклеты и плакаты могут стать интерактивными.</p>
+              <span class="project-card__btn ar-example-btn">Возможный сценарий</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section process" id="process">
+      <div class="container">
+        <div class="section__header reveal">
+          <h2 class="section__title">Этапы работы</h2>
+        </div>
+        <div class="process__timeline">
+          <div class="process__step reveal">
+            <div class="process__step-num">01</div>
+            <h3>Знакомство с проектом</h3>
+            <p>Изучаем задачу, цели и формат будущего проекта.</p>
+          </div>
+          <div class="process__step reveal reveal--delay">
+            <div class="process__step-num">02</div>
+            <h3>Подготовка материалов</h3>
+            <p>Получаем фотографии, видео, логотипы и другие необходимые материалы.</p>
+          </div>
+          <div class="process__step reveal reveal--delay-2">
+            <div class="process__step-num">03</div>
+            <h3>Разработка концепции</h3>
+            <p>Продумываем интерактивный сценарий и пользовательский опыт.</p>
+          </div>
+          <div class="process__step reveal reveal--delay-3">
+            <div class="process__step-num">04</div>
+            <h3>Создание проекта</h3>
+            <p>Собираем решение, адаптируя его под конкретную задачу.</p>
+          </div>
+          <div class="process__step reveal">
+            <div class="process__step-num">05</div>
+            <h3>Тестирование</h3>
+            <p>Проверяем корректность работы на разных устройствах.</p>
+          </div>
+          <div class="process__step reveal reveal--delay">
+            <div class="process__step-num">06</div>
+            <h3>Передача проекта</h3>
+            <p>Передаём готовое решение и консультируем по его использованию.</p>
+          </div>
+        </div>
+
+        <div class="ar-deliverables">
+          <div class="section__header reveal">
+            <span class="section__tag">Результат</span>
+            <h3 class="section__title">Что получает клиент</h3>
+          </div>
+          <div class="approach__grid">
+            <article class="service-card reveal">
+              <span class="ar-check" aria-hidden="true">✔</span>
+              <h3 class="service-card__title">Готовый интерактивный проект</h3>
+            </article>
+            <article class="service-card reveal reveal--delay">
+              <span class="ar-check" aria-hidden="true">✔</span>
+              <h3 class="service-card__title">Консультацию по использованию</h3>
+            </article>
+            <article class="service-card reveal reveal--delay-2">
+              <span class="ar-check" aria-hidden="true">✔</span>
+              <h3 class="service-card__title">Поддержку при запуске</h3>
+            </article>
+            <article class="service-card reveal reveal--delay-3">
+              <span class="ar-check" aria-hidden="true">✔</span>
+              <h3 class="service-card__title">Современный цифровой продукт</h3>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="faq">
+      <div class="container">
+        <div class="section__header reveal">
+          <span class="section__tag">FAQ</span>
+          <h2 class="section__title">Частые вопросы</h2>
+        </div>
+        <div class="services__grid">
+          <article class="service-card reveal">
+            <h3 class="service-card__title">Что такое дополненная реальность?</h3>
+            <p class="service-card__desc">Это способ сделать печатные материалы интерактивными: на экране смартфона появляется дополнительный цифровой контент — видео, анимация или презентация поверх привычного изображения.</p>
+          </article>
+          <article class="service-card reveal reveal--delay">
+            <h3 class="service-card__title">Для каких проектов подходит AR?</h3>
+            <p class="service-card__desc">Формат подходит для бизнеса, рекламы, полиграфии, образования, подарков, фотопродукции, упаковки и презентаций — везде, где важно удивить и вовлечь аудиторию.</p>
+          </article>
+          <article class="service-card reveal reveal--delay-2">
+            <h3 class="service-card__title">Какие материалы нужны для начала работы?</h3>
+            <p class="service-card__desc">Обычно достаточно описания задачи, исходных изображений или макетов и материалов, которые хотите показать аудитории: видео, тексты, логотипы или идеи сценария.</p>
+          </article>
+          <article class="service-card reveal reveal--delay-3">
+            <h3 class="service-card__title">Сколько времени занимает разработка?</h3>
+            <p class="service-card__desc">Срок зависит от объёма материалов, сложности сценария и количества правок. Точные сроки определяются после обсуждения задачи.</p>
+          </article>
+          <article class="service-card reveal">
+            <h3 class="service-card__title">Как рассчитывается стоимость?</h3>
+            <p class="service-card__desc">Стоимость рассчитывается индивидуально: учитываются формат проекта, объём контента и желаемый результат. После обсуждения вы получаете понятное предложение.</p>
+          </article>
+          <article class="service-card reveal reveal--delay">
+            <h3 class="service-card__title">Можно ли реализовать собственную идею?</h3>
+            <p class="service-card__desc">Да. Можно отталкиваться от готовых сценариев применения или предложить свою идею — вместе подберём подходящий формат и путь реализации.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section services" id="pricing">
+      <div class="container">
+        <div class="section__header reveal">
+          <span class="section__tag">Условия</span>
+          <h2 class="section__title">Стоимость</h2>
+          <p class="section__subtitle">Каждый проект отличается по сложности, объёму материалов и поставленным задачам.</p>
+          <p class="section__subtitle">Поэтому стоимость рассчитывается индивидуально после обсуждения проекта.</p>
+          <div class="hero__actions">
+            <a href="#contact" class="btn btn--primary">Обсудить идею</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section contact" id="contact">
+      <div class="container">
+        <div class="contact__grid">
+          <div class="contact__info reveal">
+            <span class="section__tag">Контакты</span>
+            <h2 class="section__title">Обсудим проект<br>и формат <em>работы</em></h2>
+            <p>Расскажите о задаче. Я помогу определить формат AR-решения и предложу рабочий формат взаимодействия.</p>
+            <ul class="contact__details">
+              <li>
+                <span class="contact__label">Email</span>
+                <a href="mailto:winterinfo@yandex.ru">winterinfo@yandex.ru</a>
+              </li>
+              <li>
+                <span class="contact__label">Telegram</span>
+                <a href="https://t.me/WinterSlava" target="_blank" rel="noopener noreferrer">@WinterSlava</a>
+              </li>
+              <li>
+                <span class="contact__label">Локация</span>
+                <span>Россия</span>
+              </li>
+            </ul>
+          </div>
+          <form class="contact__form reveal reveal--delay" id="contactForm" novalidate>
+            <div class="form-group">
+              <label for="name">Имя</label>
+              <input type="text" id="name" name="name" placeholder="Ваше имя" required autocomplete="name">
+              <span class="form-error" id="nameError" role="alert"></span>
+            </div>
+            <div class="form-group">
+              <label for="phone">Телефон</label>
+              <input type="tel" id="phone" name="phone" placeholder="+7 (999) 123-45-67" required autocomplete="tel" inputmode="tel">
+              <span class="form-error" id="phoneError" role="alert"></span>
+            </div>
+            <div class="form-group">
+              <label for="email">Email <span aria-hidden="true">(необязательно)</span></label>
+              <input type="email" id="email" name="email" placeholder="you@email.com" autocomplete="email">
+              <span class="form-error" id="emailError" role="alert"></span>
+            </div>
+            <div class="form-group">
+              <label for="message">Сообщение</label>
+              <textarea id="message" name="message" rows="5" placeholder="Расскажите о проекте..." required></textarea>
+              <span class="form-error" id="messageError" role="alert"></span>
+            </div>
+            <button type="submit" class="btn btn--primary btn--full" id="formSubmitBtn">Обсудить идею</button>
+            <p class="form-success" id="formSuccess" hidden role="status">Спасибо! Я свяжусь с вами в ближайшее время.</p>
+            <p class="form-error" id="formError" hidden role="alert"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section class="section services" id="final-cta">
+      <div class="container">
+        <div class="section__header reveal">
+          <span class="section__tag">CTA</span>
+          <h2 class="section__title">Обсудим AR-проект?</h2>
+          <p class="section__subtitle">Расскажите о задаче — предложу подходящий формат и этапы работы.</p>
+          <div class="hero__actions">
+            <a href="#contact" class="btn btn--primary">Обсудить идею</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <a href="../index.html" class="logo logo--footer">
+        <span class="logo__mark">W</span>
+        <span class="logo__text">WINTER.DESIGN</span>
+      </a>
+      <p class="footer__copy">&copy; 2026 Вячеслав Винтер · WINTER.DESIGN. Все права защищены.</p>
+      <a href="../blog/index.html" class="nav__link">Блог</a>
+      <div class="footer__socials">
+        <span aria-label="Behance">Be</span>
+        <span aria-label="Dribbble">Dr</span>
+        <span aria-label="Instagram">Ig</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../assets/js/script.js?v=3"></script>
+</body>
+</html>
