@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Блог WINTER.DESIGN — статьи о веб-дизайне, UX/UI, создании сайтов и развитии бизнеса в интернете.">
+  <title>Блог WINTER.DESIGN — статьи о веб-дизайне и UX/UI</title>
+  <link rel="canonical" href="https://winter-design.ru/blog/">
+  <meta property="og:title" content="Блог WINTER.DESIGN — статьи о веб-дизайне и UX/UI">
+  <meta property="og:description" content="Блог WINTER.DESIGN — статьи о веб-дизайне, UX/UI, создании сайтов и развитии бизнеса в интернете.">
+  <meta property="og:image" content="https://winter-design.ru/images/opengraph.png">
+  <meta property="og:url" content="https://winter-design.ru/blog/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="WINTER.DESIGN">
+  <meta property="og:locale" content="ru_RU">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Блог WINTER.DESIGN — статьи о веб-дизайне и UX/UI">
+  <meta name="twitter:description" content="Блог WINTER.DESIGN — статьи о веб-дизайне, UX/UI, создании сайтов и развитии бизнеса в интернете.">
+  <meta name="twitter:image" content="https://winter-design.ru/images/opengraph.png">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="../assets/favicon/favicon-32x32.png" type="image/png" sizes="32x32">
+  <link rel="icon" href="../assets/favicon/favicon-16x16.png" type="image/png" sizes="16x16">
+  <link rel="shortcut icon" href="../assets/favicon/favicon.ico">
+  <link rel="apple-touch-icon" href="../assets/favicon/apple-touch-icon.png" sizes="180x180">
+  <link rel="manifest" href="../assets/favicon/site.webmanifest">
+  <meta name="theme-color" content="#0B1220">
+  <meta name="msapplication-TileColor" content="#0B1220">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <style>
+    /* Blog index — local card rhythm */
+    .blog-index .approach__grid .service-card {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+
+    .blog-index .approach__grid .service-card .project-card__btn,
+    .blog-index .approach__grid .service-card .blog-card__soon {
+      margin-top: auto;
+      padding-top: 24px;
+    }
+
+    .blog-index .blog-card__soon {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--color-text-muted);
+      opacity: 0.72;
+    }
+  </style>
+</head>
+<body class="blog-index">
+
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a href="../index.html" class="logo">
+        <span class="logo__mark">W</span>
+        <span class="logo__text">WINTER.DESIGN</span>
+      </a>
+
+      <nav class="nav" id="nav" aria-label="Основная навигация">
+        <ul class="nav__list">
+          <li><a href="../index.html#hero" class="nav__link">Главная</a></li>
+          <li><a href="../index.html#portfolio" class="nav__link">Портфолио</a></li>
+          <li><a href="../services.html" class="nav__link">Услуги</a></li>
+          <li><a href="../index.html#about" class="nav__link">Обо мне</a></li>
+          <li><a href="index.html" class="nav__link active" aria-current="page">Блог</a></li>
+          <li><a href="../index.html#contact" class="nav__link nav__link--cta">Контакты</a></li>
+        </ul>
+      </nav>
+
+      <button class="burger" id="burger" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="hero">
+      <div class="container hero__inner">
+        <div class="hero__content reveal">
+          <p class="hero__label">Блог · WINTER.DESIGN</p>
+          <h1 class="hero__title">Блог WINTER.DESIGN</h1>
+          <p class="hero__desc">
+            Полезные материалы о веб-дизайне, создании сайтов, UX/UI и развитии бизнеса в интернете.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section services" id="articles">
+      <div class="container">
+        <div class="section__header reveal">
+          <span class="section__tag">Статьи</span>
+          <h2 class="section__title">Материалы блога</h2>
+          <p class="section__subtitle">
+            Практические разборы по дизайну, структуре сайтов и выбору решений для бизнеса.
+          </p>
+        </div>
+
+        <div class="approach__grid">
+          <article class="service-card reveal">
+            <span class="section__tag">Статья</span>
+            <h3 class="service-card__title">Сколько стоит дизайн сайта в 2026 году: этапы работы веб-дизайнера и цены</h3>
+            <p class="service-card__desc">Разбираем стоимость разработки дизайна сайта, этапы работы веб-дизайнера и факторы, которые влияют на цену проекта.</p>
+            <a href="stoimost-dizayna-sayta.html" class="project-card__btn">Читать статью</a>
+          </article>
+
+          <article class="service-card reveal reveal--delay">
+            <span class="section__tag">Статья</span>
+            <h3 class="service-card__title">Как выбрать веб-дизайнера и не потерять деньги</h3>
+            <p class="service-card__desc">10 распространённых ошибок при выборе веб-дизайнера и советы, которые помогут избежать лишних расходов и получить качественный результат.</p>
+            <a href="kak-vybrat-veb-dizaynera.html" class="project-card__btn">Читать статью</a>
+          </article>
+
+          <article class="service-card reveal reveal--delay-2">
+            <span class="section__tag">Скоро</span>
+            <h3 class="service-card__title">Почему сайт не приносит заявки</h3>
+            <p class="service-card__desc">Основные ошибки сайтов и способы сделать проект эффективнее.</p>
+            <span class="blog-card__soon">Скоро</span>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <a href="../index.html" class="logo logo--footer">
+        <span class="logo__mark">W</span>
+        <span class="logo__text">WINTER.DESIGN</span>
+      </a>
+      <p class="footer__copy">&copy; 2026 Вячеслав Винтер · WINTER.DESIGN. Все права защищены.</p>
+      <a href="index.html" class="nav__link active" aria-current="page">Блог</a>
+      <div class="footer__socials">
+        <span aria-label="Behance">Be</span>
+        <span aria-label="Dribbble">Dr</span>
+        <span aria-label="Instagram">Ig</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../assets/js/script.js?v=3"></script>
+</body>
+</html>
