@@ -81,6 +81,11 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://winter-design.ru/blog/pochemu-tilda-dlya-biznesa.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://winter-design.ru/blog/index.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
